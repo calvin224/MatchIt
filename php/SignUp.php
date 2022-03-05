@@ -14,7 +14,7 @@ if(!empty($fname) && !empty($lname) && !empty($email) && !empty($password)){
         }else{
                             $ran_id = rand(time(), 100000000);
                             $status = "Active now";
-                            $encrypt_pass = md5($password);
+                            $encrypt_pass = $password;
                             $insert_query = mysqli_query($conn, "INSERT INTO userstable (UserId, firstname, lastname, email, password)
                                 VALUES ({$ran_id}, '{$fname}','{$lname}', '{$email}', '{$encrypt_pass}')");
                             if($insert_query){

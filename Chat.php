@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" name="viewport" content = "width-device-width, initial-scale=1.0">
-    <title>Young fellas on the pull</title>
+    <title>Match-It!</title>
     <link rel="stylesheet" href="ChatStyle.css">
     <script src="https://kit.fontawesome.com/b17df002ae.js" crossorigin="anonymous"></script>
 </head>
