@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" name="viewport" content = "width-device-width, initial-scale=1.0">
     <title>Match-It!</title>
-    <link rel="stylesheet" href="Welcome.css">
+    <link rel="stylesheet" href="css/Welcome.css">
 </head>
 <body>
 <div class = "header">

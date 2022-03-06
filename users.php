@@ -7,7 +7,7 @@
 ?>
 <?php include_once "header.php"; ?>
 <body>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="css/style.css">
   <div class="wrapper">
     <section class="users">
       <header>

@@ -7,7 +7,7 @@
 
 <?php include_once "header.php"; ?>
 <body>
-<link rel="stylesheet" href="SignUpPage.css">
+<link rel="stylesheet" href="css/SignUpPage.css">
   <div class="wrapper">
     <section class="form signup">
       <header>Match-It!</header>
