@@ -1,46 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8" name="viewport" content = "width-device-width, initial-scale=1.0">
-    <title>Match-It!</title>
-    <link rel="stylesheet" href="SignUpPage.css">
-    <script src="https://kit.fontawesome.com/b17df002ae.js" crossorigin="anonymous"></script>
-</head>
-<body>
-    <div class="wrapper">
-        <section class="signup form">
-            <header>match-it!</header>
-            <form action="#">
-                <div class="error-messsage">This is an error message!</div>
-                <div class="name-details">
-                    <div class="field input">
-                        <label>First Name</label>
-                        <input type="text" name="firstname" placeholder="First Name" required>
-                    </div>
-                    <div class="field input">
-                        <label>Last Name</label>
-                        <input type="text" name="lastname" placeholder="Last Name" required>
-                    </div>
-                </div>
-                <div class="field input">
-                    <label>Email Address</label>
-                    <input type="text" name="email" placeholder="Email Address" required>
-                </div>
-                <div class="field input">
-                    <label>Password</label>
-                    <input type="password" name="password" placeholder="Enter a password" required>
-                    <i class="fa-solid fa-eye"></i>
-                </div>
-                <div class="field button">
-                    <input type="submit" value="Continue">
-                </div>
-            </form>
-            <div class="link">Already a member? <a href="LoginPage.php">Login now</a></div>
-        </section>
-    </div>
+<?php 
+  session_start();
+  if(isset($_SESSION['unique_id'])){
+    header("location: users.php");
+  }
+?>
 
-    <script src="JavaScript/password-show-hide.js"></script>
-    <script src="JavaScript/signup.js"></script>
-    
+<?php include_once "header.php"; ?>
+<body>
+<link rel="stylesheet" href="SignUpPage.css">
+  <div class="wrapper">
+    <section class="form signup">
+      <header>Match-It!</header>
+      <form action="#" method="POST" enctype="multipart/form-data" autocomplete="off">
+        <div class="error-text"></div>
+        <div class="name-details">
+          <div class="field input">
+            <label>First Name</label>
+            <input type="text" name="fname" placeholder="First name" required>
+          </div>
+          <div class="field input">
+            <label>Last Name</label>
+            <input type="text" name="lname" placeholder="Last name" required>
+          </div>
+        </div>
+        <div class="field input">
+          <label>Email Address</label>
+          <input type="text" name="email" placeholder="Enter your email" required>
+        </div>
+        <div class="field input">
+          <label>Password</label>
+          <input type="password" name="password" placeholder="Enter new password" required>
+          <i class="fas fa-eye"></i>
+        </div>
+        <div class="field image">
+          <label>Select Image</label>
+          <input type="file" name="image" accept="image/x-png,image/gif,image/jpeg,image/jpg" required>
+        </div>
+        <div class="field button">
+          <input type="submit" name="submit" value="Continue to Chat">
+        </div>
+      </form>
+      <div class="link">Already signed up? <a href="loginPage.php">Login now</a></div>
+    </section>
+  </div>
+
+  <script src="javascript/pass-show-hide.js"></script>
+  <script src="javascript/signup.js"></script>
+
 </body>
 </html>

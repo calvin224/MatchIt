@@ -9,8 +9,8 @@
 <div class = "header">
     <nav>
         <div class="logo">
-            <img src="Images/logo.png">
-            <span>match-it!</span>
+            <img src="php/images/logo.png">
+            <span>Match-It!</span>
         </div>
         <ul>
             <li><a href="#">Home</a></li>
