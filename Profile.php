@@ -8,13 +8,13 @@
     <div class="wrapper">
         <header>
             <div class="header metrics button">
-                <a href="Welcome.php" title="User Metrics"> <i class="fa-solid fa-rocket"></i> </a>
+                <a href="Metrics.php" title="User Metrics"> <i class="fa-solid fa-rocket"></i> </a>
             </div>
             <div class="header chat button">
                 <a href="Chat.php" title="Chat"> <i class="fa-solid fa-comments"></i> </a>
             </div>
             <div class="header search button">
-                <a href="Chat.php"> <i class="fa-solid fa-magnifying-glass"></i> </a>
+                <a href="Find.php" title="Find Someone"<i class="fa-solid fa-magnifying-glass"></i> </a>
             </div>
             <div class="header logo">
                 <a href="Welcome.php">
@@ -23,17 +23,17 @@
                 </a>
             </div>
             <div class="header notifications">
-                <a href="Chat.php"> <i class="fa-solid fa-bell"></i> </a>
+                <a href="Notifications.php" title="Notifications"> <i class="fa-solid fa-bell"></i> </a>
             </div>
             <div class="header profilepicture">
-                <a href="Profile.php"> <img src="css/images/1646961640Untitled123132.png"> </a>
+                <a href="Profile.php"> <img src="css/images/jigsawprofiler.png"> </a>
             </div>
         </header>
         <hr>
             <div class="profile columns">
                 <div class="profile col1">
                     <div class="profile picture">
-                        <img src="css/images/1646961640Untitled123132.png">
+                        <img src="css/images/jigsawprofiler.png">
                     </div>
                     <div class="profile attributes">
                         <img src="css/images/freshhatch.png" title="New Hatch">
