@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="css/SignUpPage.css">
   <div class="wrapper">
     <section class="form signup">
-      <header>Match-It!</header>
+      <header>match-it!</header>
       <form action="#" method="POST" enctype="multipart/form-data" autocomplete="off">
         <div class="error-text"></div>
         <div class="name-details">
@@ -40,12 +40,12 @@
           <input type="submit" name="submit" value="Continue to Chat">
         </div>
       </form>
-      <div class="link">Already signed up? <a href="LoginPage.php">Login now</a></div>
+      <div class="link">Already signed up? <a href="loginPage.php">Login now</a></div>
     </section>
   </div>
 
-  <script src="JavaScript/pass-show-hide.js"></script>
-  <script src="JavaScript/signup.js"></script>
+  <script src="javascript/pass-show-hide.js"></script>
+  <script src="javascript/signup.js"></script>
 
 </body>
 </html>
