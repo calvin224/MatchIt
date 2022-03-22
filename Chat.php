@@ -7,7 +7,7 @@
 ?>
 <?php include_once "header.php"; ?>
 <body>
-<link rel="stylesheet" href="chat.css">
+<link rel="stylesheet" href="ChatBrowse.css">
   <div class="wrapper">
     <section class="chat-area">
       <header>

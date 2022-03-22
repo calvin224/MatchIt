@@ -2,7 +2,7 @@
   $hostname = "localhost";
   $username = "root";
   $password = "";
-  $dbname = "matchit";
+  $dbname = "test1";
 
   $conn = mysqli_connect($hostname, $username, $password, $dbname);
   if(!$conn){

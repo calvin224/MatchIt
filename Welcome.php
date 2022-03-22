@@ -16,7 +16,7 @@
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Success Stories</a></li>
-            <li><a href="LogInPage.php">Login</a></li>
+            <li><a href="LoginPage.php">Login</a></li>
             <li><a href="SignUpPage.php">Sign Up</a></li>
         </ul>
     </nav>
