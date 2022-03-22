@@ -9,8 +9,8 @@
 <div class = "header">
     <nav>
         <div class="logo">
-            <img src="php/images/logo.png">
-            <span>Match-It!</span>
+            <img src="css/images/logoplain.png">
+            <span>match-it!</span>
         </div>
         <ul>
             <li><a href="#">Home</a></li>
@@ -22,6 +22,7 @@
     </nav>
 
     <div class="content">
+        <h1 class="slide-left">Don't just wing it...</h1>
         <h1 class="slide-left">match-it!</h1>
         <p class="slide-left">The greatest dating service</p>
         <div class="links slide-left">
