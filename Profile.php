@@ -31,7 +31,7 @@
                     </div>
                     <div class="profile details">
                         <p>Jack</p>
-                        <p>20</p>
+                        <p>21</p>
                         <p>Limerick</p>
                     </div>
                     <div class="profile about">
