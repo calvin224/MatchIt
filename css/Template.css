@@ -1,140 +1,120 @@
 *{
+
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
 }
-
 body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #fff;
+
+    background: #f7f7f7;
 }
 .wrapper{
     background: #fff;
+
+
+    box-shadow: 0 0 128px 0 rgba(0,0,0,0.1),
+    0 32px 64px -48px rgba(0,0,0,0.5);
     overflow: clip;
 }
 .wrapper header{
-    height: 40px;
+    height: 30px;
     margin-bottom: 60px;
     display: flex;
 }
-header .button{
-    padding: 20px;
+header .metrics{
+    padding-top: 20px;
+}
+header .metrics button{
     border: none;
     background: none;
     color: #67676a;
     font-size: 50px;
 }
-header .button a{
+header .metrics a{
     color: inherit;
     text-decoration: none;
 }
-header .button a:hover{
+header .metrics a:hover{
     color: grey;
 }
-header .logo{
-    margin-top: 20px;
-    margin-left: auto;
-    width: 250px;
-    height: 50px;
-    margin-right: 3.5%;
-    position: relative;
+header .chat{
+    padding-top: 10px;
 }
-header .logo .hover{
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 99;
-}
-header .logo:hover .hover{
-    display: inline;
-}
-header .logo img{
-    width: 250px;
-}
-header .notifications{
-    margin-left: auto;
-    padding: 20px;
+header .chat button{
     border: none;
     background: none;
     color: #67676a;
     font-size: 50px;
 }
-header .notifications a{
+header .chat a{
     color: inherit;
     text-decoration: none;
 }
-header .notifications a:hover{
+header .chat a:hover{
     color: grey;
 }
 header .profilepicture{
-    padding: 10px;
+    margin-left: auto;
+}
+header .profilepicture button{
     border: none;
     background: none;
     color: #67676a;
     font-size: 50px;
+}
+header .profilepicture button:hover{
+
 }
 header .profilepicture img{
     width: 80px;
     border-radius: 50%;
     align-items: center;
-    border: 3px solid #C3C8D3;
-}
-header .profilepicture img:hover{
-    border: 3px solid #666F80;
 }
 .columns{
-    margin-left: 5vw;
-    margin-right: 5vw;
-    padding: 30px;
-    background-color: #C3C8D3;
     position: relative;
     display: flex;
 }
 .col1{
     position: relative;
     height: 80vh;
-    width: 40vw;
-    align-items: center;
-    background-image: linear-gradient(#8F85D1, #7E75B7);
+    flex-basis: 100%;
+    border-radius: 10px;
 }
 .picture{
-    margin-left: auto;
-    margin-right: auto;
+    margin-top: 50px;
+    margin-left: 160px;
+    width: 60%;
 }
 .picture img{
-    width: 20%;
+    width: 140px;
     border-radius: 50%;
     border: 1px solid black;
 }
 .attributes{
-    margin: auto;
+    margin-left: 95px;
+    margin-right: 90px;
     border-radius: 50px;
-    width: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     border: 1px solid black;
-    background: #fff;
-    padding: 5px;
-    gap: 10px;
 }
 .attributes img{
-    width: 15%;
     border-radius: 50%;
     box-shadow: 0 0 128px 0 rgba(0,0,0,0.1),
     0 32px 64px -48px rgba(0,0,0,0.5);
 }
 .details{
     margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
+    padding-left: 150px;
     width: 65%;
     text-align: center;
     font-size: x-large;
+    color: #FFFFFF;
 }
 .details p{
     margin: 0;
@@ -143,16 +123,13 @@ header .profilepicture img:hover{
 .about{
     border-radius: 5px ;
     margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 15px;
-    padding-right: 15px;
-    height: 50%;
+    margin-left: 100px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 40%;
     width: 60%;
     overflow-y: auto;
     border: 1px solid black;
-    background-color: #ffffff;
-    text-align: center;
 }
 .about::-webkit-scrollbar{
     width: 0px;
@@ -160,28 +137,24 @@ header .profilepicture img:hover{
 .col2{
     position: relative;
     height: 80vh;
-    margin-left: 8vw;
-    margin-right: 8vw;
-    border-radius: 10px;
+    flex-basis: 100%;
 }
 .bioheader{
     text-align: center;
     font-size: 30px;
+    color: grey;
 }
 .bio{
     border-radius: 5px;
     text-align: center;
-    align-self: center;
     margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 20px;
+    margin-right: 20px;
     padding-top: 10px;
     padding-left: 10px;
     padding-right: 10px;
-    height: 80%;
-    width: 25vw;
+    height: 90%;
     overflow-y: auto;
-    background-color: #ffffff;
     border: 1px solid black;
 }
 .about::-webkit-scrollbar{
@@ -190,12 +163,12 @@ header .profilepicture img:hover{
 .col3{
     position: relative;
     height: 80vh;
-    width: 35vw;
-    background-image: linear-gradient(#8F85D1, #7E75B7);
+    flex-basis: 100%;
+    border-radius: 10px;
 }
 .gallery{
+    flex-basis: 100%;
     align-content: center;
-    width: auto;
     margin-top: 50px;
     margin-bottom: 250px;
 }
@@ -209,19 +182,4 @@ header .profilepicture img:hover{
     border: 1px solid grey;
     box-shadow: 0 0 128px 0 rgba(0,0,0,0.1),
     0 32px 64px -48px rgba(0,0,0,0.5);
-}
-.wrapper footer{
-    margin-top: 10px;
-    margin-bottom: 60px;
-}
-footer .logo{
-    margin-top: 50px;
-    width: 90px;
-}
-footer .logo img{
-    height: 80px;
-}
-footer .logo a{
-    color: inherit;
-    text-decoration: none;
 }

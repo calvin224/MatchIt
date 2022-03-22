@@ -9,20 +9,19 @@
 <div class = "header">
     <nav>
         <div class="logo">
-            <img src="css/images/logoplain.png">
-            <span>match-it!</span>
+            <img src="php/images/logo.png">
+            <span>Match-It!</span>
         </div>
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Success Stories</a></li>
-            <li><a href="LogInPage.php">Login</a></li>
+            <li><a href="LoginPage.php">Login</a></li>
             <li><a href="SignUpPage.php">Sign Up</a></li>
         </ul>
     </nav>
 
     <div class="content">
-        <h1 class="slide-left">Don't just wing it...</h1>
         <h1 class="slide-left">match-it!</h1>
         <p class="slide-left">The greatest dating service</p>
         <div class="links slide-left">

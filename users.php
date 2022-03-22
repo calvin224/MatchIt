@@ -1,7 +1,7 @@
 <?php 
   session_start();
   include_once "php/config.php";
-  if(!isset($_SESSION['UserID'])){
+  if(!isset($_SESSION['unique_id'])){
     header("location: LoginPage.php");
   }
 ?>
@@ -13,21 +13,18 @@
       <header>
         <div class="content">
           <?php 
-            $sql = mysqli_query($conn, "SELECT * FROM `user table` WHERE UserID = {$_SESSION['UserID']}");
-            $sql2 = mysqli_query($conn, "SELECT * FROM `profile table` WHERE UserID = {$_SESSION['UserID']}");
+            $sql = mysqli_query($conn, "SELECT * FROM users WHERE unique_id = {$_SESSION['unique_id']}");
             if(mysqli_num_rows($sql) > 0){
               $row = mysqli_fetch_assoc($sql);
             }
-            if(mysqli_num_rows($sql) > 0){
-              $row2 = mysqli_fetch_assoc($sql2);
-            }
           ?>
-          <img src="php/images/<?php echo $row2['Photo']; ?>" alt="">
+          <img src="php/images/<?php echo $row['img']; ?>" alt="">
           <div class="details">
-            <span><?php echo $row['Firstname']. " " . $row['Lastname'] ?></span>
+            <span><?php echo $row['fname']. " " . $row['lname'] ?></span>
+            <p><?php echo $row['status']; ?></p>
           </div>
         </div>
-        <a href="php/logout.php?logout_id=<?php echo $row['UserID']; ?>" class="logout">Logout</a>
+        <a href="php/logout.php?logout_id=<?php echo $row['unique_id']; ?>" class="logout">Logout</a>
       </header>
       <div class="search">
         <span class="text">Select an user to start chat</span>

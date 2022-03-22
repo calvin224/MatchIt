@@ -7,39 +7,27 @@
     <body>
     <div class="wrapper">
         <header>
-            <div class="header metrics button">
-                <a href="Welcome.php" title="User Metrics"> <i class="fa-solid fa-rocket"></i> </a>
+            <div class="header metrics">
+                <button> <a href="Welcome.php"> <i class="fa-solid fa-rocket"></i> </a> </button>
             </div>
-            <div class="header chat button">
-                <a href="Chat.php" title="Chat"> <i class="fa-solid fa-comments"></i> </a>
-            </div>
-            <div class="header search button">
-                <a href="Chat.php"> <i class="fa-solid fa-magnifying-glass"></i> </a>
-            </div>
-            <div class="header logo">
-                <a href="Welcome.php">
-                    <img src="css/images/title.png">
-                    <img src="css/images/titlealt.png" class="hover">
-                </a>
-            </div>
-            <div class="header notifications">
-                <a href="Chat.php"> <i class="fa-solid fa-bell"></i> </a>
+            <div class="header chat">
+                <button> <a href="Chat.php"> <i class="fa-solid fa-paper-plane"></i> </a> </button>
             </div>
             <div class="header profilepicture">
-                <a href="Profile.php"> <img src="css/images/1646961640Untitled123132.png"> </a>
+                <button> <a href="Profile.php"> <img src="php/images/1646961640Untitled123132.png"> </a> </button>
             </div>
         </header>
         <hr>
             <div class="profile columns">
                 <div class="profile col1">
                     <div class="profile picture">
-                        <img src="css/images/1646961640Untitled123132.png">
+                        <img src="php/images/1646961640Untitled123132.png">
                     </div>
                     <div class="profile attributes">
-                        <img src="css/images/freshhatch.png" title="New Hatch">
-                        <img src="css/images/frosty.png" title="Frosty!">
-                        <img src="css/images/inshell.png" title="In Your Shell">
-                        <img src="css/images/onfire.png" title="On Fire!">
+                        <img src="php/images/freshhatch.png" title="New Hatch">
+                        <img src="php/images/frosty.png" title="Frosty!">
+                        <img src="php/images/inshell.png" title="In Your Shell">
+                        <img src="php/images/onfire.png" title="On Fire!">
                     </div>
                     <div class="profile details">
                         <p>Jack</p>
@@ -60,18 +48,12 @@
                 </div>
                 <div class="profile col3">
                     <div class="gallery">
-                        <img src="css/images/1646743105discordpic.png">
-                        <img src="css/images/1646743105discordpic.png">
-                        <img src="css/images/1646743105discordpic.png">
+                        <img src="php/images/1646743105discordpic.png">
+                        <img src="php/images/1646743105discordpic.png">
+                        <img src="php/images/1646743105discordpic.png">
                     </div>
                 </div>
             </div>
-        <hr>
-        <footer>
-            <div class="footer logo">
-                <a href="Welcome.php"> <img src="css/images/logo.png" alt="Logo"> </a>
-            </div>
-        </footer>
         </div>
     </body>
 </html>
