@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 22, 2022 at 01:56 AM
+-- Generation Time: Mar 22, 2022 at 12:27 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `matchit3`
+-- Database: `test1`
 --
 
 -- --------------------------------------------------------
@@ -155,6 +155,25 @@ CREATE TABLE `messages` (
   `IsFirstMessage` bit(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `messages`
+--
+
+INSERT INTO `messages` (`msg_id`, `incoming_msg_id`, `outgoing_msg_id`, `Timestamp`, `msg`, `IsFrosty`, `IsFirstMessage`) VALUES
+(1, 158227308, 1646076043, NULL, 'hello', NULL, NULL),
+(2, 158227308, 1646076043, NULL, 'hello2', NULL, NULL),
+(3, 158227308, 1646076043, NULL, 'hello31234', NULL, NULL),
+(4, 158227308, 1646076043, NULL, 'helelrewqr', NULL, NULL),
+(5, 158227308, 1646076043, NULL, 'wrerwe2342342', NULL, NULL),
+(6, 1646076043, 974279347, NULL, 'hllo', NULL, NULL),
+(7, 1646076043, 974279347, NULL, 'hi', NULL, NULL),
+(8, 974279347, 1646076043, NULL, 'ha ha', NULL, NULL),
+(9, 1646076043, 974279347, NULL, 'wewewewew', NULL, NULL),
+(10, 1646076043, 974279347, NULL, 'wq12312313', NULL, NULL),
+(11, 1646076043, 974279347, NULL, '312wdwsdq', NULL, NULL),
+(12, 1646076043, 974279347, NULL, '12asfwe2qwe', NULL, NULL),
+(13, 1646076043, 974279347, NULL, 'weqweeqwe', NULL, NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -209,7 +228,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`user_id`, `unique_id`, `fname`, `lname`, `email`, `password`, `Admin`, `Completed`, `status`, `img`) VALUES
-(0, 158227308, 'Calvin', 'Power', 'p@gmail.com', '202cb962ac59075b964b07152d234b70', 0x00, 0x00, 'Offline now', '1647910298download (2).jpg');
+(0, 158227308, 'Calvin', 'Power', 'p@gmail.com', '202cb962ac59075b964b07152d234b70', 0x00, 0x00, 'Offline now', '1647910298download (2).jpg'),
+(0, 1646076043, 'Jack', 'Boland', 'Jack@jack.com', '40687c8206d15373954d8b27c6724f62', 0x00, 0x00, 'Active now', '1647922005Untitled222.png'),
+(0, 974279347, 'Jack2', 'Boland', 'Jack@jack2.com', '5f1a99e81e562a86869b223f79c51f16', 0x00, 0x00, 'Offline now', '1647926195Untitled123132.png');
 
 --
 -- Indexes for dumped tables
@@ -275,20 +296,17 @@ ALTER TABLE `matching table`
 -- Indexes for table `messages`
 --
 ALTER TABLE `messages`
-  ADD KEY `ChatID` (`ChatID`),
-  ADD KEY `UserID` (`UserID`);
+  ADD PRIMARY KEY (`msg_id`);
 
 --
--- Indexes for table `potential matches table`
+-- AUTO_INCREMENT for dumped tables
 --
-ALTER TABLE `potential matches table`
-  ADD PRIMARY KEY (`ID`);
 
 --
--- Indexes for table `profile table`
+-- AUTO_INCREMENT for table `messages`
 --
-ALTER TABLE `profile table`
-  ADD KEY `UserID` (`UserID`);
+ALTER TABLE `messages`
+  MODIFY `msg_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
