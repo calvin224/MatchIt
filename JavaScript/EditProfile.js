@@ -1,4 +1,4 @@
-const form = document.querySelector(".signup form"),
+const form = document.querySelector(".editprofile form"),
     continueBtn = form.querySelector(".button input"),
     errorText = form.querySelector(".error-text");
 
@@ -11,10 +11,10 @@ continueBtn.onclick = ()=>{
     xhr.open("POST", "php/Edit.php", true);
     xhr.onload = ()=>{
         if(xhr.readyState === XMLHttpRequest.DONE){
-            if(xhr.status === 201){
+            if(xhr.status === 200){
                 let data = xhr.response;
                 if(data === "success"){
-                    location.href="Profile.php";
+                    location.href="users.php";
                 }else{
                     errorText.style.display = "block";
                     errorText.textContent = data;
