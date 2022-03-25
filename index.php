@@ -9,7 +9,7 @@
 <div class = "header">
     <nav>
         <div class="logo">
-            <img src="php/images/logo.png">
+            <img src="css/images/logoplain.png">
             <span>Match-It!</span>
         </div>
         <ul>
