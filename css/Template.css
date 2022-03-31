@@ -108,8 +108,12 @@ header .profilepicture img:hover{
     border-radius: 10px;
 }
 .picture{
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    gap: 10px;
 }
 .picture img{
     width: 30%;
