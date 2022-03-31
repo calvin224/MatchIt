@@ -9,6 +9,7 @@
     width: 0px;
 }
 body{
+    display: flex;
     align-items: center;
     justify-content: center;
     background: #fff;
@@ -107,12 +108,8 @@ header .profilepicture img:hover{
     border-radius: 10px;
 }
 .picture{
-    margin: auto;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    padding: 5px;
-    gap: 10px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .picture img{
     width: 30%;

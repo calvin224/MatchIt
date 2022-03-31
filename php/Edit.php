@@ -15,7 +15,7 @@ $completed = 1;
         if(mysqli_num_rows($sql) > 0){
             $insert_query = mysqli_query($conn, "UPDATE profiletable 
             SET Age = '{$Age}',Gender ='{$Gender}' ,Seeking='{$Seeking}',Description='{$Description}',Location='{$Location}' WHERE unique_id = '{$id}'");
-            $insert_query = mysqli_query($conn, "UPDATE users 
+            $insert_query = mysqli_query($conn, "UPDATE user 
             SET Completed = '{$completed}' WHERE unique_id = '{$id}'");
             echo "success";
         }else {
