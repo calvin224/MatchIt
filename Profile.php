@@ -4,6 +4,14 @@ include_once "php/config.php";
 if(!isset($_SESSION['unique_id'])){
     header("location: LoginPage.php");
 }
+$sql = mysqli_query($conn, "SELECT * FROM users WHERE unique_id = {$_SESSION['unique_id']}");
+            if(mysqli_num_rows($sql) > 0){
+                $row = mysqli_fetch_assoc($sql);
+            }
+$completed =$row['Completed'];
+if($completed != 1 ){
+    header("location: EditProfile.php");
+}
 ?>
 <?php include_once "header.php"; ?>
 <html>
@@ -15,10 +23,6 @@ if(!isset($_SESSION['unique_id'])){
     <div class="wrapper">
         <header>
             <?php
-            $sql = mysqli_query($conn, "SELECT * FROM users WHERE unique_id = {$_SESSION['unique_id']}");
-            if(mysqli_num_rows($sql) > 0){
-                $row = mysqli_fetch_assoc($sql);
-            }
             $sql2 = mysqli_query($conn, "SELECT * FROM profiletable WHERE unique_id = {$_SESSION['unique_id']}");
             if(mysqli_num_rows($sql2) > 0){
                 $row2 = mysqli_fetch_assoc($sql2);
