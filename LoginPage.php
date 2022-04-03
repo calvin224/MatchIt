@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(isset($_SESSION['unique_id'])){
-    header("location: users.php");
+    header("location: Profile.php");
 }
 ?>
 
@@ -23,7 +23,7 @@ if(isset($_SESSION['unique_id'])){
                 <i class="fas fa-eye"></i>
             </div>
             <div class="field button">
-                <input type="submit" name="submit" value="Continue to Chat">
+                <input type="submit" name="submit" value="Continue to Match!">
             </div>
         </form>
         <div class="link">Not yet signed up? <a href="SignUpPage.php">Signup now</a></div>

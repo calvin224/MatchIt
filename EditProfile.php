@@ -38,7 +38,7 @@ if(!isset($_SESSION['unique_id'])){
 <link rel="stylesheet" href="css/SignUpPage.css">
 <div class="wrapper">
     <section class="form editprofile">
-        <header><a href="users.php" class="back-icon"><i class="fas fa-arrow-left"></i></a>Match-It!</header>
+        <header><a href="Profile.php" class="back-icon"><i class="fas fa-arrow-left"></i></a>Match-It!</header>
         <form action="#" method="POST" enctype="multipart/form-data" autocomplete="off">
             <div class="error-text"></div>
             <div class="name-details">

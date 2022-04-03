@@ -13,7 +13,6 @@ if(mysqli_num_rows($sql) > 0){
 }
 $_SESSION['TheirID'] = $row;
 
-
 ?>
 <?php include_once "header.php"; ?>
 

@@ -8,7 +8,8 @@ if(!isset($_SESSION['unique_id'])){
 <?php include_once "header.php"; ?>
 <html>
 <head>
-    <link rel="stylesheet" href="css/Template.css">
+    <link rel="stylesheet" href="css/FindTemplate.css">
+    <link rel="stylesheet" href="css/teststyle.css">
     <script src="https://kit.fontawesome.com/b17df002ae.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -26,14 +27,19 @@ if(!isset($_SESSION['unique_id'])){
         <div class="header chat button">
             <a href="users.php" title="Chat"> <i class="fa-solid fa-comments"></i> </a>
         </div>
-        <div class="header search button">
+        <div class="header find button">
             <a href="Find.php" title="Find Someone"<i class="fa-solid fa-magnifying-glass"></i> </a>
         </div>
         <div class="header logo">
-            <a href="Welcome.php">
-                <img src="css/images/title.png">
-                <img src="css/images/titlealt.png" class="hover">
+            <a href="index.php">
+                <img src="https://github.com/calvin224/MatchIt/blob/pagelinkingtest/css/images/title.png?raw=true">
+                <img src="https://github.com/calvin224/MatchIt/blob/pagelinkingtest/css/images/titlealt.png?raw=true" class="hover">
             </a>
+        </div>
+        <div class="search">
+            <span class="text">Click to search user interests</span>
+            <input type="text" placeholder="Enter interest to search...">
+            <button><i class="fas fa-search"></i></button>
         </div>
         <div class="header notifications">
             <a href="Notifications.php" title="Notifications"> <i class="fa-solid fa-bell"></i> </a>
@@ -43,20 +49,18 @@ if(!isset($_SESSION['unique_id'])){
         </div>
     </header>
     <hr>
-    <div class="profile columns">
-            <div class="find">
-                <p><a href="https://pr.to/E7VGQF/?ap=3">"Find" Page Prototype Here</a></p>
-            </div>
+    <div class="find-list">
+
     </div>
     <hr>
     <footer>
         <div class="footer logo">
-            <a href="Welcome.php"> <img src="css/images/logo.png" alt="Logo"> </a>
+            <a href="Welcome.php"> <img src="https://github.com/calvin224/MatchIt/blob/pagelinkingtest/css/images/logo.png?raw=true" alt="Logo"> </a>
         </div>
     </footer>
 </div>
 
-<script src="javascript/users.js"></script>
+<script src="JavaScript/FindUsersTable.js"></script>
 
 </body>
 </html>

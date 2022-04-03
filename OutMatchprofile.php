@@ -30,7 +30,11 @@ if(mysqli_num_rows($sql) > 0){
     header("location: users.php");
 }
 $_SESSION['TheirID'] = $row;
-
+if ($row3['Age'] == 0){
+    $age = "Age Unset";
+} else {
+    $age = $row3['Age'];
+}
 ?>
 <?php include_once "header.php"; ?>
 <html>
@@ -79,7 +83,7 @@ $_SESSION['TheirID'] = $row;
             </div>
             <div class="profile details">
                 <p><?php echo $row['fname']. " " . $row['lname'] ?></p>
-                <p><?php echo $row3['Age'] ?></p>
+                <p><?php echo $age ?></p>
                 <p><?php echo $row3['Location'] ?></p>
             </div>
             <div class="profile about">

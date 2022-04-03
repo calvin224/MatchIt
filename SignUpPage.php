@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(isset($_SESSION['unique_id'])){
-    header("location: users.php");
+    header("location: Profile.php");
 }
 ?>
 
@@ -37,7 +37,7 @@ if(isset($_SESSION['unique_id'])){
                 <input type="file" name="image" accept="image/x-png,image/gif,image/jpeg,image/jpg" required>
             </div>
             <div class="field button">
-                <input type="submit" name="submit" value="Continue to Chat">
+                <input type="submit" name="submit" value="Continue to Match!">
             </div>
         </form>
         <div class="link">Already signed up? <a href="LoginPage.php">Login now</a></div>
