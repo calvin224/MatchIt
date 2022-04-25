@@ -40,7 +40,8 @@ header .button a:hover{
 }
 header .logo{
     margin-top: 20px;
-    margin-left: 29.5%;
+    margin-left: 19.5%;
+    margin-right: 5%;
     width: 250px;
     height: 50px;
     position: relative;
