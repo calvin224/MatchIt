@@ -26,6 +26,10 @@ if(!empty($fname) && !empty($lname) && !empty($email) && !empty($password)){
                         $time = time();
                         $new_img_name = $time.$img_name;
                         if(move_uploaded_file($tmp_name,"images/".$new_img_name)){
+                            $sql2 = mysqli_query($conn, "SELECT * FROM blacklisttable WHERE Email = '{$email}'");
+                            if(mysqli_num_rows($sql2) > 0){
+                                echo "You have been permanently banned!";
+                            } else {
                             $ran_id = rand(time(), 100000000);
                             $status = "Active now";
                             $encrypt_pass = md5($password);
@@ -40,10 +44,11 @@ if(!empty($fname) && !empty($lname) && !empty($email) && !empty($password)){
                                     $_SESSION['unique_id'] = $result['unique_id'];
                                     echo "success";
                                 }else{
-                                    echo "This email address not Exist!";
+                                    echo "There is no account associated with this email!";
                                 }
                             }else{
                                 echo "Something went wrong. Please try again!";
+                            }
                             }
                         }
                     }else{
