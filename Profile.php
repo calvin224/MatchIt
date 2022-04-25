@@ -12,6 +12,14 @@ $completed =$row['Completed'];
 if($completed != 1 ){
     header("location: EditProfile.php");
 }
+$sql2 = mysqli_query($conn, "SELECT * FROM profiletable WHERE unique_id = {$_SESSION['unique_id']}");
+if(mysqli_num_rows($sql2) > 0){
+    $row2 = mysqli_fetch_assoc($sql2);
+}
+$sql3 = mysqli_query($conn,"SELECT * FROM abouttable u JOIN availableabouttable m ON u.AboutID=m.AboutID WHERE u.UserID ={$_SESSION['unique_id']}" );
+if(mysqli_num_rows($sql2) > 0){
+    $row3 = mysqli_fetch_assoc($sql3);
+}
 ?>
 <?php include_once "header.php"; ?>
 <html>
@@ -52,7 +60,9 @@ if($completed != 1 ){
             <a href="Notifications.php" title="Notifications"> <i class="fa-solid fa-bell"></i> </a>
         </div>
         <div class="header profilepicture">
-            <a href="EditProfile.php"> <img src="php/images/<?php echo $row['img']; ?>" alt=""> </a>
+            <a href="EditProfile.php"> <img src="php/images/<?php echo
+                $row['img'];
+            ?>" alt=""> </a>
         </div>
     </header>
     <body>
@@ -83,8 +93,6 @@ if($completed != 1 ){
             <div class="About">
                 <h2>Bio:</h2>
                 <p><?php echo $row2['Description'] ?></>
-            </div>
-        </div>
         <div class="column" style="background-color:ghostwhite;">
             <h2>Gallery</h2>
             <img src="css/images/1646743105discordpic.png">

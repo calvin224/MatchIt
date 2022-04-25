@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `about table`
 --
 
-CREATE TABLE `about table` (
+CREATE TABLE `abouttable` (
   `UserID` int(255) NOT NULL,
   `AboutID` int(255) DEFAULT NULL,
   `Rank` int(255) DEFAULT NULL
@@ -40,7 +40,7 @@ CREATE TABLE `about table` (
 -- Table structure for table `available about table`
 --
 
-CREATE TABLE `available about table` (
+CREATE TABLE `availableabouttable` (
   `AboutID` int(255) NOT NULL,
   `Name` varchar(255) DEFAULT NULL,
   `Icon` varchar(255) DEFAULT NULL
@@ -52,7 +52,7 @@ CREATE TABLE `available about table` (
 -- Table structure for table `available hobbies table`
 --
 
-CREATE TABLE `available hobbies table` (
+CREATE TABLE `availablehobbiestable` (
   `InterestID` int(255) NOT NULL,
   `Name` varchar(255) DEFAULT NULL,
   `Icon` varchar(255) DEFAULT NULL
@@ -64,7 +64,7 @@ CREATE TABLE `available hobbies table` (
 -- Table structure for table `blacklist table`
 --
 
-CREATE TABLE `blacklist table` (
+CREATE TABLE `blacklisttable` (
   `ID` int(255) NOT NULL,
   `Email` varchar(255) NOT NULL,
   `Timestamp` datetime NOT NULL
@@ -76,7 +76,7 @@ CREATE TABLE `blacklist table` (
 -- Table structure for table `chat table`
 --
 
-CREATE TABLE `chat table` (
+CREATE TABLE `chattable` (
   `ChatID` int(255) NOT NULL,
   `UserA_ID` int(255) NOT NULL,
   `UserB_ID` int(255) NOT NULL,
@@ -89,7 +89,7 @@ CREATE TABLE `chat table` (
 -- Table structure for table `gallery pictures table`
 --
 
-CREATE TABLE `gallery pictures table` (
+CREATE TABLE `gallerypicturestable` (
   `UserID` int(255) DEFAULT NULL,
   `GalleryPicture1` varchar(255) DEFAULT NULL,
   `GalleryPicture2` varchar(255) DEFAULT NULL,
@@ -102,7 +102,7 @@ CREATE TABLE `gallery pictures table` (
 -- Table structure for table `hobbies table`
 --
 
-CREATE TABLE `hobbies table` (
+CREATE TABLE `hobbiestable` (
   `UserID` int(255) DEFAULT NULL,
   `InterestID` int(255) DEFAULT NULL,
   `Rank` int(11) NOT NULL
@@ -114,7 +114,7 @@ CREATE TABLE `hobbies table` (
 -- Table structure for table `location information`
 --
 
-CREATE TABLE `location information` (
+CREATE TABLE `locationinformation` (
   `UserID` int(255) NOT NULL,
   `Address Line 1` varchar(255) DEFAULT NULL,
   `Address Line 2` varchar(255) DEFAULT NULL,
@@ -240,7 +240,7 @@ INSERT INTO `messages` (`msg_id`, `incoming_msg_id`, `outgoing_msg_id`, `Timesta
 -- Table structure for table `potential matches table`
 --
 
-CREATE TABLE `potential matches table` (
+CREATE TABLE `potentialmatchestable` (
   `ID` int(255) NOT NULL,
   `UserA_ID` int(255) NOT NULL,
   `UserB_ID` int(255) NOT NULL,
