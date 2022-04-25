@@ -31,7 +31,7 @@ if(isset($_SESSION['unique_id'])){
 </div>
 
 <script src="JavaScript/pass-show-hide.js"></script>
-<script src="JavaScript/login.js"></script>
+<script src="JavaScript/Adminlogin.js"></script>
 
 </body>
 </html>

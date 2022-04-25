@@ -107,3 +107,7 @@ form .name-details .field:last-child{
 a:link:hover{
     text-decoration: underline;
 }
+header a{
+    color: #333;
+    text-decoration: none;
+}
