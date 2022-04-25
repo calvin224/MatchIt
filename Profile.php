@@ -12,6 +12,14 @@ $completed =$row['Completed'];
 if($completed != 1 ){
     header("location: EditProfile.php");
 }
+$sql2 = mysqli_query($conn, "SELECT * FROM profiletable WHERE unique_id = {$_SESSION['unique_id']}");
+if(mysqli_num_rows($sql2) > 0){
+    $row2 = mysqli_fetch_assoc($sql2);
+}
+$sql3 = mysqli_query($conn,"SELECT * FROM abouttable u JOIN availableabouttable m ON u.AboutID=m.AboutID WHERE u.UserID ={$_SESSION['unique_id']}" );
+if(mysqli_num_rows($sql2) > 0){
+    $row3 = mysqli_fetch_assoc($sql3);
+}
 ?>
 <?php include_once "header.php"; ?>
 <html>
@@ -52,7 +60,9 @@ if($completed != 1 ){
             <a href="Notifications.php" title="Notifications"> <i class="fa-solid fa-bell"></i> </a>
         </div>
         <div class="header profilepicture">
-            <a href="EditProfile.php"> <img src="php/images/<?php echo $row['img']; ?>" alt=""> </a>
+            <a href="EditProfile.php"> <img src="php/images/<?php echo
+                $row['img'];
+            ?>" alt=""> </a>
         </div>
     </header>
     <hr>
@@ -73,7 +83,11 @@ if($completed != 1 ){
                 <p><?php echo $row2['Location'] ?></p>
             </div>
             <div class="profile about">
-                <p>Fusce mattis pulvinar tortor a vehicula. Mauris turpis tellus, porttitor sit amet egestas id, congue et dui. Phasellus feugiat, risus quis tincidunt auctor, augue est mattis erat, id volutpat lectus nunc in leo. Aliquam non efficitur mi. Etiam sagittis, turpis at mollis bibendum, eros tellus consectetur felis, eu convallis felis lacus sed nisi. Cras aliquet feugiat leo vel mollis. Quisque vitae libero vehicula, rhoncus erat vel, auctor purus. Nam venenatis laoreet pharetra. Quisque mauris mauris, condimentum ac nunc nec, ultrices semper massaFusce mattis pulvinar tortor a vehicula. Mauris turpis tellus, porttitor sit amet egestas id, congue et dui. Phasellus feugiat, risus quis tincidunt auctor, augue est mattis erat, id volutpat lectus nunc in leo. Aliquam non efficitur mi. Etiam sagittis, turpis at mollis bibendum, eros tellus consectetur felis, eu convallis felis lacus sed nisi. Cras aliquet feugiat leo vel mollis. Quisque vitae libero vehicula, rhoncus erat vel, auctor purus. Nam venenatis laoreet pharetra. Quisque mauris mauris, condimentum ac nunc nec, ultrices semper massa.</p>
+                <p>
+                  <?php
+                  echo $row3['Name']
+                  ?>
+                </p>
             </div>
         </div>
         <div class="profile col2">
@@ -81,7 +95,7 @@ if($completed != 1 ){
                 <p>User Bio</p>
             </div>
             <div class="bio">
-                <p><?php echo $row2['Description'] ?></p>
+                <p><?php echo $row2['Description'] ?></>
             </div>
         </div>
         <div class="profile col3">
