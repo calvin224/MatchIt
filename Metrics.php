@@ -4,12 +4,26 @@ include_once "php/config.php";
 if(!isset($_SESSION['unique_id'])){
     header("location: LoginPage.php");
 }
+
+$sqlCountUsers = mysqli_query($conn, "select * FROM users");
+$Usercount = mysqli_num_rows($sqlCountUsers);
+$sqlCountMatches = mysqli_query($conn, "select * FROM matchingtable");
+$Matchcount = mysqli_num_rows($sqlCountMatches);
+$sqlCountMales = mysqli_query($conn, "select * FROM profiletable WHERE Gender = 'male'");
+$Malecount = mysqli_num_rows($sqlCountMales);
+$sqlCountFemales = mysqli_query($conn, "select * FROM profiletable WHERE Gender = 'female'");
+$Femalecount = mysqli_num_rows($sqlCountFemales);
+$sqlCountOther = mysqli_query($conn, "select * FROM profiletable WHERE Gender = 'other'");
+$Othercount = mysqli_num_rows($sqlCountOther);
+
+
 ?>
 <?php include_once "header.php"; ?>
 <html>
 <head>
     <link rel="stylesheet" href="css/Template.css">
     <script src="https://kit.fontawesome.com/b17df002ae.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
 <div class="wrapper">
@@ -45,13 +59,65 @@ if(!isset($_SESSION['unique_id'])){
     <hr>
     <div class="profile columns">
         <div class="metrics">
-            <p>METRICS PAGE PLACEHOLDER</p>
+            <table>
+                <tr>
+                    <th>Amount of Users</th>
+                    <th>Number Of Matches</th>
+                </tr>
+                <tr>
+                    <td><?php echo $Usercount ?></td>
+                    <td><?php echo $Matchcount ?></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="profile columns">
+        <div class="metrics">
+            <h1>Gender Breakdown</h1>
+            <canvas id="myChart" width="400" height="400"></canvas>
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+            <script>
+                const ctx = document.getElementById('myChart').getContext('2d');
+                const myChart = new Chart(ctx, {
+                    type: 'pie',
+                    data: {
+                        labels: ['Male','female','Other'],
+                        datasets: [{
+                            data: [<?php echo $Malecount?> ,<?php echo $Femalecount?> ,<?php echo $Othercount?>],
+                            backgroundColor: [
+                                'rgba(255, 99, 132, 1)',
+                                'rgba(54, 162, 235, 1)',
+                                'rgba(255, 206, 86, 1)',
+                                'rgba(75, 192, 192, 1)',
+                                'rgba(153, 102, 255, 1)',
+                                'rgba(255, 159, 64, 1)'
+                            ],
+                            borderColor: [
+                                'rgba(255, 99, 132, 1)',
+                                'rgba(54, 162, 235, 1)',
+                                'rgba(255, 206, 86, 1)',
+                                'rgba(75, 192, 192, 1)',
+                                'rgba(153, 102, 255, 1)',
+                                'rgba(255, 159, 64, 1)'
+                            ],
+                            borderWidth: 5
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+            </script>
         </div>
     </div>
     <hr>
     <footer>
         <div class="footer logo">
-            <a href="Welcome.php"> <img src="css/images/logo.png" alt="Logo"> </a>
+            <a href="index.php"> <img src="css/images/logo.png" alt="Logo"> </a>
         </div>
     </footer>
 </div>
