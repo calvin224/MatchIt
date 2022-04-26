@@ -39,7 +39,7 @@ if(!empty($fname) && !empty($lname) && !empty($email) && !empty($password)){
                                 VALUES ('{$ran_id}')");
                             $insert_query2 = mysqli_query($conn, "INSERT INTO gallerypicturestable (unique_id)
                                 VALUES ('{$ran_id}')");
-                            $insert_query2 = mysqli_query($conn, "INSERT INTO abouttable (UserID)
+                            $insert_query2 = mysqli_query($conn, "INSERT INTO abouttable (unique_id)
                                 VALUES ('{$ran_id}')");
 
                             if($insert_query){

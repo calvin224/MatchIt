@@ -151,7 +151,19 @@ header .profilepicture img:hover{
     line-height: 30px;
     color: #112A46;
 }
-
+.Characteristics{
+    text-align: center;
+}
+.Characteristics h2{
+    margin-bottom: 10px;
+}
+.container {
+    display: flex;
+    flex-flow: row wrap;
+    align-content: space-between;
+    justify-content: center;
+    gap: 5px;
+}
 .Characteristics p{
     align-content: center;
     font-weight: bold; /* Making font bold */
@@ -165,13 +177,16 @@ header .profilepicture img:hover{
     background-color: whitesmoke;
 }
 .Interests p{
+    align-content: center;
     font-weight: bold; /* Making font bold */
     border: 2px solid white;
     border-radius: 20px; /* Making border radius */
-    width: auto;
+    width: fit-content;
     height: auto;
     padding: 5px 30px 5px 30px; /* Making space around letters */
+    margin-bottom: 5px;
     font-size: 18px;
+    background-color: whitesmoke;
 }
 .column {
     float: left;

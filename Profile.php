@@ -16,7 +16,7 @@ $sql2 = mysqli_query($conn, "SELECT * FROM profiletable WHERE unique_id = {$_SES
 if(mysqli_num_rows($sql2) > 0){
     $row2 = mysqli_fetch_assoc($sql2);
 }
-$sql3 = mysqli_query($conn,"SELECT * FROM abouttable u JOIN availableabouttable m ON u.AboutID=m.AboutID WHERE u.UserID ={$_SESSION['unique_id']}" );
+$sql3 = mysqli_query($conn,"SELECT * FROM hobbiestable JOIN availablehobbiestable ON hobbiestable.InterestID = availablehobbiestable.InterestID WHERE unique_id ={$_SESSION['unique_id']}" );
 if(mysqli_num_rows($sql3) > 0){
     $row3 = mysqli_fetch_assoc($sql3);
 }
@@ -79,11 +79,14 @@ if(mysqli_num_rows($sql4) > 0){
         <div class="column" style="background-color:ghostwhite;">
             <div class="Characteristics">
                 <h2>Characteristics</h2>
-                <p>Blonde</p> <p>Tall</p> <p>Blue Eyes</p> <p>Asthmatic</p> <p>Vegan</p> <p>Introvert</p>
+                <div class="characteristicscontainer">
+                </div>
             </div>
             <div class="Interests">
                 <h2>Hobbies & Interests</h2>
-                <p>Formula 1</p> <p>Soccer</p> <p>Golf</p> <p>Fishing</p> <p>Reading</p> <p>Wordle</p> <p>Gaming</p> <p>Netflix</p> <p>Star Wars</p> <p>Disney</p> <p>Food</p> <p>Nights Out</p>
+                <div class="interestscontainer">
+
+                </div>
             </div>
         </div>
         <div class="column" style="background-color:ghostwhite;">
@@ -129,7 +132,7 @@ if(mysqli_num_rows($sql4) > 0){
     </footer>
 </div>
 
-<script src="javascript/users.js"></script>
+<script src="javascript/UserProfile.js"></script>
 
 </body>
 </html>
