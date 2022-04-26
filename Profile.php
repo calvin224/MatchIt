@@ -17,8 +17,12 @@ if(mysqli_num_rows($sql2) > 0){
     $row2 = mysqli_fetch_assoc($sql2);
 }
 $sql3 = mysqli_query($conn,"SELECT * FROM abouttable u JOIN availableabouttable m ON u.AboutID=m.AboutID WHERE u.UserID ={$_SESSION['unique_id']}" );
-if(mysqli_num_rows($sql2) > 0){
+if(mysqli_num_rows($sql3) > 0){
     $row3 = mysqli_fetch_assoc($sql3);
+}
+$sql4 = mysqli_query($conn,"SELECT * FROM gallerypicturestable WHERE unique_id ={$_SESSION['unique_id']}" );
+if(mysqli_num_rows($sql4) > 0){
+    $row4 = mysqli_fetch_assoc($sql4);
 }
 ?>
 <?php include_once "header.php"; ?>
@@ -100,9 +104,18 @@ if(mysqli_num_rows($sql2) > 0){
         </div>
         <div class="profile col3">
             <div class="gallery">
-                <img src="css/images/1646743105discordpic.png">
-                <img src="css/images/1646743105discordpic.png">
-                <img src="css/images/1646743105discordpic.png">
+                <img class="rightColImages"
+                     alt="main_Image"
+                     src="php/images/<?php echo $row4['GalleryPicture1']; ?>"
+                />
+                <img class="rightColImages"
+                     alt="main_Image"
+                     src="php/images/<?php echo $row4['GalleryPicture2']; ?>"
+                />
+                <img class="rightColImages"
+                     alt="main_Image"
+                     src="php/images/<?php echo $row4['GalleryPicture3']; ?>"
+                />
             </div>
         </div>
     </div>

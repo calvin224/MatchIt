@@ -37,10 +37,42 @@ if(!isset($_SESSION['unique_id'])){
             </a>
         </div>
         <div class="search">
-            <span class="text">Click to search user interests</span>
-            <input type="text" placeholder="Enter interest to search...">
-            <button><i class="fas fa-search"></i></button>
+            <button id="searchBtn"><i class="fas fa-search"></i></button>
         </div>
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <section class="form login">
+                    <form action="#" method="POST">
+                        <input type="checkbox" id="cycling" name="cycling" value="Cycling">
+                        <label for="cycling">Cycling</label><br>
+                        <input type="checkbox" id="running" name="running" value="Running">
+                        <label for="running">Running</label><br>
+                        <input type="checkbox" id="cooking" name="cooking" value="Cooking">
+                        <label for="cooking">Cooking</label><br>
+                        <input type="checkbox" id="soccer" name="soccer" value="Soccer">
+                        <label for="cooking">Soccer</label><br>
+                        <input type="checkbox" id="rugby" name="rugby" value="Rugby">
+                        <label for="cycling">Rugby</label><br>
+                        <input type="checkbox" id="tennis" name="tennis" value="Tennis">
+                        <label for="running">Tennis</label><br>
+                        <input type="checkbox" id="walking" name="walking" value="Walking">
+                        <label for="cooking">Walking</label><br>
+                        <input type="checkbox" id="art" name="art" value="Art">
+                        <label for="cycling">Art</label><br>
+                        <input type="checkbox" id="gaming" name="gaming" value="Gaming">
+                        <label for="running">Gaming</label><br>
+                        <div class="field button">
+                            <input type="submit" name="submit" value="Continue to Match!">
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </div>
+        </form>
         <div class="header notifications">
             <a href="Notifications.php" title="Notifications"> <i class="fa-solid fa-bell"></i> </a>
         </div>

@@ -11,11 +11,17 @@ $output = '<table class="findtable">
             </thead>
             <tbody>';
 while($row = mysqli_fetch_assoc($query)){
+    $hobbies = [];
+    $sql2 = "SELECT * from abouttable LEFT JOIN availableabouttable ON abouttable.AboutID = availableabouttable.AboutID WHERE UserID = {$row['unique_id']};";
+    $query2 = mysqli_query($conn, $sql2);
+    while($row2 = mysqli_fetch_assoc($query2)) {
+        array_push($hobbies,$row2['Name']);
+    }
     $output .= '<tr onclick="location.href = \'OutMatchprofile.php?user_id='. $row['unique_id'] .'\';">
                     <td><img src="php/images/'. $row['img'] .'" alt=""></td>
                     <td>'. $row['fname']. " " . $row['lname'] .'</td>
                     <td>'. $row['Age'] .'</td>
-                    <td>'. $row['Description'] .'</td>
+                    <td>'. implode(",",$hobbies) .'</td>
                     <td>'. $row['Location'] .'</td>
                 </tr>';
 }
