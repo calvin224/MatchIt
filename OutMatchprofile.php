@@ -68,23 +68,117 @@ if ($row3['Age'] == 0){
             <a href="Profile.php"> <img src="php/images/<?php echo $row2['img']; ?>" alt=""> </a>
         </div>
     </header>
-    <hr>
+    <body>
+    <div class="topcolumn">
+        <div class="profile-picture">
+            <img src="php/images/<?php echo $row['img']; ?>" alt="">
+        </div>
+    </div>
+    <div class="row">
+        <div class="column" style="background-color:ghostwhite;">
+            <div class="Characteristics">
+                <h2>Characteristics</h2>
+                <div class="characteristicscontainer">
+                </div>
+            </div>
+            <div class="Interests">
+                <h2>Hobbies & Interests</h2>
+                <div class="interestscontainer">
+
+                </div>
+            </div>
+        </div>
+        <div class="column" style="background-color:ghostwhite;">
+            <div class="topdetails">
+                <h3><?php echo $row['fname']. " " . $row['lname'] ?><p><?php echo $age ?><p><?php echo $row3['Location'] ?></p></h3>
+            </div>
+            <div class ="Traits">
+                <h1>&#x1F423 &#x2744 &#x1F525 &#x1F947 &#x1F47B</h1>
+                <button id="btn" value="0">Send Request!</button>
+            </div>
+            <div class="About">
+                <h2>Bio:</h2>
+                <p><?php echo $row3['Description'] ?></>
+            </div>
+        </div>
+        <div class="column" style="background-color: ghostwhite">
+            <h2>Gallery</h2>
+            <!-- Slideshow --!>
+            <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 3</div>
+                    <img src="php/images/<?php echo $row4['GalleryPicture1']; ?>"style="width:90%">
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 3</div>
+                    <img src="php/images/<?php echo $row4['GalleryPicture2']; ?>"style="width:90%">
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 3</div>
+                    <img src="php/images/<?php echo $row4['GalleryPicture3']; ?>"style="width:90%">
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+
+            </div>
+            <br>
+
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+            <!-- Slideshow !-->
+            <script>
+                let slideIndex = 1;
+                showSlides(slideIndex);
+
+                function plusSlides(n) {
+                    showSlides(slideIndex += n);
+                }
+
+                function currentSlide(n) {
+                    showSlides(slideIndex = n);
+                }
+
+                function showSlides(n) {
+                    let i;
+                    let slides = document.getElementsByClassName("mySlides");
+                    let dots = document.getElementsByClassName("dot");
+                    if (n > slides.length) {slideIndex = 1}
+                    if (n < 1) {slideIndex = slides.length}
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndex-1].style.display = "block";
+                    dots[slideIndex-1].className += " active";
+                }
+            </script>
+        </div>
+    <!--
     <div class="profile columns">
         <div class="profile col1">
             <div class="profile picture">
-                <img src="php/images/<?php echo $row['img']; ?>" alt="">
+                <img  alt="">
             </div>
             <div class="profile attributes">
                 <img src="css/images/freshhatch.png" title="New Hatch">
                 <img src="css/images/frosty.png" title="Frosty!">
                 <img src="css/images/inshell.png" title="In Your Shell">
                 <img src="css/images/onfire.png" title="On Fire!">
-                <button id="btn" value="0">Send Request!</button>
+
             </div>
             <div class="profile details">
-                <p><?php echo $row['fname']. " " . $row['lname'] ?></p>
-                <p><?php echo $age ?></p>
-                <p><?php echo $row3['Location'] ?></p>
+                <p></p>
+                <p></p>
+                <p></p>
             </div>
             <div class="profile about">
                 <p>Fusce mattis pulvinar tortor a vehicula. Mauris turpis tellus, porttitor sit amet egestas id, congue et dui. Phasellus feugiat, risus quis tincidunt auctor, augue est mattis erat, id volutpat lectus nunc in leo. Aliquam non efficitur mi. Etiam sagittis, turpis at mollis bibendum, eros tellus consectetur felis, eu convallis felis lacus sed nisi. Cras aliquet feugiat leo vel mollis. Quisque vitae libero vehicula, rhoncus erat vel, auctor purus. Nam venenatis laoreet pharetra. Quisque mauris mauris, condimentum ac nunc nec, ultrices semper massaFusce mattis pulvinar tortor a vehicula. Mauris turpis tellus, porttitor sit amet egestas id, congue et dui. Phasellus feugiat, risus quis tincidunt auctor, augue est mattis erat, id volutpat lectus nunc in leo. Aliquam non efficitur mi. Etiam sagittis, turpis at mollis bibendum, eros tellus consectetur felis, eu convallis felis lacus sed nisi. Cras aliquet feugiat leo vel mollis. Quisque vitae libero vehicula, rhoncus erat vel, auctor purus. Nam venenatis laoreet pharetra. Quisque mauris mauris, condimentum ac nunc nec, ultrices semper massa.</p>
@@ -95,7 +189,7 @@ if ($row3['Age'] == 0){
                 <p>User Bio</p>
             </div>
             <div class="bio">
-                <p><?php echo $row3['Description'] ?></p>
+                <p></p>
             </div>
         </div>
         <div class="profile col3">
@@ -107,6 +201,7 @@ if ($row3['Age'] == 0){
             </div>
         </div>
     </div>
+    !-->
     <hr>
     <footer>
         <div class="footer logo">

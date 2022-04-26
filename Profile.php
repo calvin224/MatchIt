@@ -101,27 +101,66 @@ if(mysqli_num_rows($sql4) > 0){
                 <p><?php echo $row2['Description'] ?></>
             </div>
         </div>
-        <div class="column" style="background-color:ghostwhite;">
+        <div class="column" style="background-color: ghostwhite">
             <h2>Gallery</h2>
-            <img src="css/images/1646743105discordpic.png">
-            <img src="css/images/1646743105discordpic.png">
-            <img src="css/images/1646743105discordpic.png">
-        </div>
-        <div class="profile col3">
-            <div class="gallery">
-                <img class="rightColImages"
-                     alt="main_Image"
-                     src="php/images/<?php echo $row4['GalleryPicture1']; ?>"
-                />
-                <img class="rightColImages"
-                     alt="main_Image"
-                     src="php/images/<?php echo $row4['GalleryPicture2']; ?>"
-                />
-                <img class="rightColImages"
-                     alt="main_Image"
-                     src="php/images/<?php echo $row4['GalleryPicture3']; ?>"
-                />
+            <!-- Slideshow !-->
+            <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 3</div>
+                    <img src="php/images/<?php echo $row4['GalleryPicture1']; ?>"style="width:90%">
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 3</div>
+                    <img src="php/images/<?php echo $row4['GalleryPicture2']; ?>"style="width:90%">
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 3</div>
+                    <img src="php/images/<?php echo $row4['GalleryPicture3']; ?>"style="width:90%">
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+
             </div>
+            <br>
+
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+            <!-- Slideshow !-->
+            <script>
+                let slideIndex = 1;
+                showSlides(slideIndex);
+
+                function plusSlides(n) {
+                    showSlides(slideIndex += n);
+                }
+
+                function currentSlide(n) {
+                    showSlides(slideIndex = n);
+                }
+
+                function showSlides(n) {
+                    let i;
+                    let slides = document.getElementsByClassName("mySlides");
+                    let dots = document.getElementsByClassName("dot");
+                    if (n > slides.length) {slideIndex = 1}
+                    if (n < 1) {slideIndex = slides.length}
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndex-1].style.display = "block";
+                    dots[slideIndex-1].className += " active";
+                }
+            </script>
         </div>
     </div>
     <hr>
