@@ -5,10 +5,11 @@ if(!isset($_SESSION['unique_id'])){
     header("location: LoginPage.php");
 }
 $sql = mysqli_query($conn, "SELECT * FROM profiletable WHERE unique_id =  {$_SESSION['unique_id']}");
+/*
 if(!mysqli_num_rows($sql) > 0){
     header("location: EditProfile.php");
 }
-
+*/
 ?>
 <?php include_once "header.php"; ?>
 <body>

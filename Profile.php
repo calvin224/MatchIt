@@ -9,9 +9,9 @@ $sql = mysqli_query($conn, "SELECT * FROM users WHERE unique_id = {$_SESSION['un
             $row = mysqli_fetch_assoc($sql);
         }
 $completed =$row['Completed'];
-if($completed != 1 ){
+/*if($completed != 1 ){
     header("location: EditProfile.php");
-}
+}*/
 $sql2 = mysqli_query($conn, "SELECT * FROM profiletable WHERE unique_id = {$_SESSION['unique_id']}");
 if(mysqli_num_rows($sql2) > 0){
     $row2 = mysqli_fetch_assoc($sql2);
@@ -69,38 +69,40 @@ if(mysqli_num_rows($sql4) > 0){
             ?>" alt=""> </a>
         </div>
     </header>
-    <hr>
-    <div class="profile columns">
-        <div class="profile col1">
-            <div class="profile picture">
-                <img src="php/images/<?php echo $row['img']; ?>" alt="">
+    <body>
+    <div class="topcolumn">
+        <div class="profile-picture">
+        <img src="php/images/<?php echo $row['img']; ?>" alt="">
+        </div>
+    </div>
+    <div class="row">
+        <div class="column" style="background-color:ghostwhite;">
+            <div class="Characteristics">
+                <h2>Characteristics</h2>
+                <p>Blonde</p> <p>Tall</p> <p>Blue Eyes</p> <p>Asthmatic</p> <p>Vegan</p> <p>Introvert</p>
             </div>
-            <div class="profile attributes">
-                <img src="css/images/freshhatch.png" title="New Hatch">
-                <img src="css/images/frosty.png" title="Frosty!">
-                <img src="css/images/inshell.png" title="In Your Shell">
-                <img src="css/images/onfire.png" title="On Fire!">
-            </div>
-            <div class="profile details">
-                <p><?php echo $row['fname']. " " . $row['lname'] ?></p>
-                <p><?php echo $age ?></p>
-                <p><?php echo $row2['Location'] ?></p>
-            </div>
-            <div class="profile about">
-                <p>
-                  <?php
-                  echo $row3['Name']
-                  ?>
-                </p>
+            <div class="Interests">
+                <h2>Hobbies & Interests</h2>
+                <p>Formula 1</p> <p>Soccer</p> <p>Golf</p> <p>Fishing</p> <p>Reading</p> <p>Wordle</p> <p>Gaming</p> <p>Netflix</p> <p>Star Wars</p> <p>Disney</p> <p>Food</p> <p>Nights Out</p>
             </div>
         </div>
-        <div class="profile col2">
-            <div class="bioheader">
-                <p>User Bio</p>
+        <div class="column" style="background-color:ghostwhite;">
+            <div class="topdetails">
+                <h3><?php echo $row['fname']. " " . $row['lname'] ?> <p><?php echo $age ?> <p><?php echo $row2['Location'] ?></p></h3>
             </div>
-            <div class="bio">
+            <div class ="Traits">
+                <h1>&#x1F423 &#x2744 &#x1F525 &#x1F947 &#x1F47B</h1>
+            </div>
+            <div class="About">
+                <h2>Bio:</h2>
                 <p><?php echo $row2['Description'] ?></>
             </div>
+        </div>
+        <div class="column" style="background-color:ghostwhite;">
+            <h2>Gallery</h2>
+            <img src="css/images/1646743105discordpic.png">
+            <img src="css/images/1646743105discordpic.png">
+            <img src="css/images/1646743105discordpic.png">
         </div>
         <div class="profile col3">
             <div class="gallery">

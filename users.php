@@ -10,9 +10,9 @@ if(mysqli_num_rows($sql) > 0){
     $row = mysqli_fetch_assoc($sql);
 }
 $completed =$row['Completed'];
-if($completed != 1 ){
+/*if($completed != 1 ){
     header("location: EditProfile.php");
-}
+}*/
 ?>
 <?php include_once "header.php"; ?>
 <body>
