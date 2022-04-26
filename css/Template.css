@@ -15,7 +15,7 @@ body{
     background: #fff;
 }
 .wrapper{
-    background: #ffff;
+    background: #fff;
     overflow: clip;
 }
 .wrapper header{
@@ -90,101 +90,6 @@ header .profilepicture img{
 header .profilepicture img:hover{
     border: 3px solid #666F80;
 }
-* {
-    box-sizing: border-box;
-}
-
-/* Top Column; Profiler, Name, Age, Location. */
-.topcolumn {
-    float: top;
-    width: 100%;
-    height: 210px;
-    background-image: linear-gradient(to bottom, white, whitesmoke, rgba(5,0,136,0.5));
-}
-.profile-picture{
-}
-.profile-picture img{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 50%;
-    border: 5px #67676a;
-    object-fit: cover;
-    height: 135px;
-}
-.topdetails{
-    padding-top: 5px;
-    display: block;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    color: #112A46;
-}
-/* Top Column; Profiler, Name, Age, Location. */
-/* Middle Column; Traits, Traits. */
-.Traits{
-    width: auto;
-    height: auto ;
-    padding: 10px;
-    text-align: center;
-    background-color: whitesmoke;
-    border-radius: 25px;
-    color: #112A46;
-}
-
-.About h2{
-    text-align: center;
-    padding-top: 10px;
-    color: #112A46;
-}
-.About p{
-    margin-top: 12px;
-    min-height: 175px;
-    height: auto ;
-    text-align: center;
-    background-color: whitesmoke;
-    border-radius: 25px;
-    padding: 10px;
-    line-height: 30px;
-    color: #112A46;
-}
-
-.Characteristics p{
-    align-content: center;
-    font-weight: bold; /* Making font bold */
-    border: 2px solid white;
-    border-radius: 20px; /* Making border radius */
-    width: fit-content;
-    height: auto;
-    padding: 5px 30px 5px 30px; /* Making space around letters */
-    margin-bottom: 5px;
-    font-size: 18px;
-    background-color: whitesmoke;
-}
-.Interests p{
-    font-weight: bold; /* Making font bold */
-    border: 2px solid white;
-    border-radius: 20px; /* Making border radius */
-    width: auto;
-    height: auto;
-    padding: 5px 30px 5px 30px; /* Making space around letters */
-    font-size: 18px;
-}
-.column {
-    float: left;
-    text-align: center;
-    width: 33.33%;
-    padding: 10px;
-    height: 500px; /* Should be removed. Only for demonstration */
-}
-
-/* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-/*
 .columns{
     margin-left: 5vw;
     margin-right: 5vw;
@@ -313,7 +218,6 @@ header .profilepicture img:hover{
     box-shadow: 0 0 128px 0 rgba(0,0,0,0.1),
     0 32px 64px -48px rgba(0,0,0,0.5);
 }
-*/
 .wrapper footer{
     margin-top: 10px;
     margin-bottom: 60px;
