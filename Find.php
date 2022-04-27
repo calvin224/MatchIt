@@ -4,6 +4,14 @@ include_once "php/config.php";
 if(!isset($_SESSION['unique_id'])){
     header("location: LoginPage.php");
 }
+
+$insert_query = mysqli_query($conn,"SELECT * from hobbiestable JOIN availablehobbiestable ON hobbiestable.InterestID = availablehobbiestable.InterestID WHERE unique_id = {$_SESSION['unique_id']}");
+$hobbies = array();
+while($row2 = mysqli_fetch_assoc($insert_query)) {
+    array_push($hobbies,$row2['Name']);
+}
+$rand = mt_rand(0,sizeof($hobbies)-1);
+$recommendation = $hobbies[$rand] ;
 ?>
 <?php include_once "header.php"; ?>
 <html>
@@ -65,6 +73,8 @@ if(!isset($_SESSION['unique_id'])){
                         <label for="cycling">Art</label><br>
                         <input type="checkbox" id="gaming" name="gaming" value="Gaming">
                         <label for="running">Gaming</label><br>
+                        <input type="checkbox" id="<?php echo $recommendation ?>" name="<?php echo $recommendation ?>" value="<?php echo $recommendation?>">
+                        <label for="<?php echo $recommendation?>">Reccomend me users!</label><br>
                         <div class="field button">
                             <input type="submit" name="submit" value="Continue to Match!">
                         </div>

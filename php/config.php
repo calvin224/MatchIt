@@ -1,8 +1,8 @@
 <?php
 $hostname = "localhost";
-$username = "id18657714_matchitadmin";
-$password = "@zTqe7/L34V4gJx=";
-$dbname = "id18657714_matchit";
+$username = "root";
+$password = "";
+$dbname = "matchit";
 
 $conn = mysqli_connect($hostname, $username, $password, $dbname);
 if(!$conn){
