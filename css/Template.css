@@ -23,6 +23,8 @@ body{
     margin-bottom: 60px;
     display: flex;
     width: 100vw;
+    align-content: center;
+    justify-content: center;
 }
 header .button{
     padding: 20px;
@@ -40,11 +42,9 @@ header .button a:hover{
 }
 header .logo{
     margin-top: 20px;
-    margin-left: auto;
     width: 250px;
     height: 50px;
-    margin-right: 3.5%;
-    position: relative;
+    position: absolute;
 }
 header .logo .hover{
     display: none;
@@ -260,6 +260,7 @@ header .profilepicture img:hover{
     margin: 20px auto 20px;
     color: #112A46;
 }
+
 /* Top Column; Profiler, Name, Age, Location. */
 /* Middle Column; Traits, Traits. */
 .Traits{
@@ -609,6 +610,7 @@ header .profilepicture img:hover{
     height: 750px; /* Should be removed. Only for demonstration */
 }
 
+
 /* Clear floats after the columns */
 .row:after {
     content: "";
@@ -616,6 +618,11 @@ header .profilepicture img:hover{
     clear: both;
 }
 
+
+mySlides .img{
+    max-height: 80%;
+    object-fit: cover;
+}
 /* slideshow */
 * {box-sizing: border-box}
 body {font-family: Verdana, sans-serif; margin:0}
@@ -708,6 +715,8 @@ img {vertical-align: middle;}
 @media only screen and (max-width: 300px) {
     .prev, .next,.text {font-size: 11px}
 }
+
+
 /*
 .columns{
     margin-left: 5vw;
@@ -839,12 +848,10 @@ img {vertical-align: middle;}
 }
 */
 .wrapper footer{
-    margin-top: 10px;
-    margin-bottom: 60px;
+    margin: 10px;
     width: 100vw;
 }
 footer .logo{
-    margin-top: 50px;
     width: 90px;
 }
 footer .logo img{

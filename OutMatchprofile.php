@@ -93,9 +93,19 @@ if ($row3['Age'] == 0){
                 <h3><?php echo $row['fname']. " " . $row['lname'] ?><p><?php echo $age ?><p><?php echo $row3['Location'] ?></p></h3>
             </div>
             <div class ="Traits">
-                <h1>&#x1F423 &#x2744 &#x1F525 &#x1F947 &#x1F47B</h1>
-                <button id="btn" value="0">Send Request!</button>
+                <h1> <a href="index.php#Traits"> &#x2744 &#x1F525 &#x1F947 &#x1F47B</a></h1>
             </div>
+            <button id="btn" value="0" style="
+            margin-top: 13px;
+            height: 45px;
+            padding: 10px;
+            border: none;
+            font-size: 17px;
+            font-weight: 400;
+            background: #7E75B7;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;">Send Request!</button>
             <div class="About">
                 <h2>Bio:</h2>
                 <p><?php echo $row3['Description'] ?></>
@@ -103,7 +113,7 @@ if ($row3['Age'] == 0){
         </div>
         <div class="column" style="background-color: ghostwhite">
             <h2>Gallery</h2>
-            <!-- Slideshow --!>
+            <!-- Slideshow !-->
             <div class="slideshow-container">
 
                 <div class="mySlides fade">

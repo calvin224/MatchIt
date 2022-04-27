@@ -30,7 +30,7 @@
     </div>
 
     <div class="successstories">
-        <h1>Success Stories:</h1>
+        <h1>Successful Matches:</h1>
     </div>
 
     <style>
@@ -38,6 +38,7 @@
             margin-left: 4%;
             margin-top: 20px;
             border: 1px solid #ccc;
+            border-radius: 25px;
             float: left;
             width: 20%;
         }
@@ -48,6 +49,8 @@
 
         div.gallery img {
             width: 100%;
+            border-top-left-radius:  25px;
+            border-top-right-radius: 25px;
             height: auto;
         }
 
@@ -59,28 +62,28 @@
     </style>
 
     <div class="gallery">
-        <a target="_blank" href="css/images/Couple1.jpg">
+        <a target="_blank">
             <img src="css/images/Couple1.jpg" alt="Joe and Anna" width="600" height="400">
         </a>
         <div class="desc"> Anna (23) and Joe (25)</div>
     </div>
 
     <div class="gallery">
-        <a target="_blank" href="css/images/Couple2.jpg">
+        <a target="_blank">
             <img src="css/images/Couple2.jpg" alt="Leah and Kate" width="600" height="400">
         </a>
         <div class="desc">Leah (27) and Kate (31)</div>
     </div>
 
     <div class="gallery">
-        <a target="_blank" href="css/images/Couple3.jpg">
+        <a target="_blank">
             <img src="css/images/Couple3.jpg" alt="Jake and Meabh" width="600" height="400">
         </a>
         <div class="desc">Jake (20) and Méabh (21)</div>
     </div>
 
     <div class="gallery">
-        <a target="_blank" href="css/images/Couple4.jpg">
+        <a target="_blank">
             <img src="css/images/Couple4.jpg" alt="Martin and Olivia" width="600" height="400">
         </a>
         <div class="desc">Martin (45) and Olivia (39)</div>
@@ -111,6 +114,16 @@
         <br>
         <p>You should use these initial messages to 'break-the-ice!' because after this period you're free to communicate as frequently (or infrequently)
             as you both desire.</p>
+        <br  id="Traits">
+        <div class="Traits">
+        <p style="margin-top: 10%">Traits:</p>
+            <br>
+        <p>New Hatch ! &#x1F423 : The User Has Just Joined Match-it!</p>
+        <p>Frosty ! &#x2744 : The User Has Not Replied to a Matches' Greeting Message.</p>
+        <p>On-Fire ! &#x1F525 : The User Has at Some Stage Had The Most Messages Sent.</p>
+        <p>Top User ! &#x1F947 : The User Has at Some Stage Had the Most Match Requests on match-it!</p>
+        <p>Ghost ! &#x1F47B : Boo ! This User Has Not Been Active For 24hrs.</p>
+        </div>
     </div>
 <!-- About End !-->
 

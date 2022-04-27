@@ -210,18 +210,24 @@ nav ul li a{
         opacity: 1;
     }
 }
+.Traits{
+    margin-left: 0%;
+}
 
 .footer{
-    height: 110px;
+    display: flex;
+    height: 100px;
     width: 100%;
     background-color: rgb(34, 30, 63, 0.70);
     color: #67676a;
 }
 .footer p{
-    text-align: center;
+    margin-top: 50px;
+margin-left: 30%;
 }
 .footer img{
     height: 80px;
+    margin-top: 10px;
     margin-left: 9px;
     margin-right: 9px;
 }

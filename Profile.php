@@ -449,7 +449,7 @@ if(mysqli_num_rows($sql4) > 0){
                 <h3><?php echo $row['fname']. " " .$row['lname'] ?> <p><?php echo $age ?> <p><?php echo $row2['Location'] ?></p></h3>
             </div>
             <div class ="Traits">
-                <h1><?php echo $row2['NewHatch']?> <?php echo $row2['OnFire']?> <?php echo $row2['TopUser']?> <?php $row2['Ghost']?> <?php $row2['isfrosty']?></h1>
+                <h1><a href="index.php#Traits"><?php echo $row2['NewHatch']?> <?php echo $row2['OnFire']?> <?php echo $row2['TopUser']?> <?php $row2['Ghost']?> <?php $row2['isfrosty']?></a></h1>
             </div>
             <br>
             <!-- The Modal -->
