@@ -104,7 +104,7 @@
         <p>Don't be 'Frosty'!</p>
         <br>
         <p>Have you ever been on a dating app, matched with someone who you'd only love to get deep in conversation with, you send that greeting message
-        and... Nothing, no reply... Why !?! Well, here at frosty we're hoping to rectify this; when you match with a user you must send
+        and... Nothing, no reply... Why !?! Well, here at match-it! we're hoping to rectify this; when you match with a user, you must send
         a message within 24hrs, after this, your match must reply within 24hrs. If you don't message your match you'll be marked with the 'Frosty' trait
             and a &#10052 will appear beside your profile to let everyone else know you didn't communicate with a match within the last 24hrs.
         Maybe they'll think twice before deciding to like your profile because of this...</p>

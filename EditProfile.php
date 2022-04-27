@@ -77,9 +77,74 @@ if(!isset($_SESSION['unique_id'])){
                 <label>Gallery Image #3</label>
                 <input type="file" name="GalleryPicture3" accept="image/x-png,image/gif,image/jpeg,image/jpg">
             </div>
+            <h3>Characteristics</h3>
+            <!-- Checklist !-->
+            <label class="container">One
+                <input type="checkbox" checked="checked">
+                <span class="checkmark"></span>
+            </label>
+
+            <label class="container">Two
+                <input type="checkbox">
+                <span class="checkmark"></span>
+            </label>
+
+            <label class="container">Three
+                <input type="checkbox">
+                <span class="checkmark"></span>
+            </label>
+
+            <label class="container">Four
+                <input type="checkbox">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">One
+                <input type="checkbox" checked="checked">
+                <span class="checkmark"></span>
+            </label>
+
+            <label class="container">Two
+                <input type="checkbox">
+                <span class="checkmark"></span>
+            </label>
+
+            <label class="container">Three
+                <input type="checkbox">
+                <span class="checkmark"></span>
+            </label>
+
+            <label class="container">Four
+                <input type="checkbox">
+                <span class="checkmark"></span>
+            </label>
+            <!-- checklist !-->
+            <h3>Hobbies& Interests</h3>
+            <!-- Checklist !-->
+            <label class="container">One
+                <input type="checkbox" checked="checked">
+                <span class="checkmark"></span>
+            </label>
+
+            <label class="container">Two
+                <input type="checkbox">
+                <span class="checkmark"></span>
+            </label>
+
+            <label class="container">Three
+                <input type="checkbox">
+                <span class="checkmark"></span>
+            </label>
+
+            <label class="container">Four
+                <input type="checkbox">
+                <span class="checkmark"></span>
+            </label>
+            <!-- checklist !-->
             <div class="field button">
                 <input type="submit" name="submit" value="Update your Profile!" href="Profile.php">
             </div>
+
+
         </form>
     </section>
 </div>

@@ -21,7 +21,7 @@ $Othercount = mysqli_num_rows($sqlCountOther);
 <?php include_once "header.php"; ?>
 <html>
 <head>
-    <link rel="stylesheet" href="css/Template.css">
+    <link rel="stylesheet" href="css/Metrics.css">
     <script src="https://kit.fontawesome.com/b17df002ae.js" crossorigin="anonymous"></script>
 
 </head>
@@ -57,7 +57,7 @@ $Othercount = mysqli_num_rows($sqlCountOther);
         </div>
     </header>
     <hr>
-    <div class="profile columns">
+    <div class="column">
         <div class="metrics">
             <table>
                 <tr>
@@ -71,10 +71,10 @@ $Othercount = mysqli_num_rows($sqlCountOther);
             </table>
         </div>
     </div>
-    <div class="profile columns">
+    <div class="column">
         <div class="metrics">
             <h1>Gender Breakdown</h1>
-            <canvas id="myChart" width="400" height="400"></canvas>
+            <canvas id="myChart" style="margin: 5%"></canvas>
             <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
             <script>
                 const ctx = document.getElementById('myChart').getContext('2d');
@@ -104,18 +104,15 @@ $Othercount = mysqli_num_rows($sqlCountOther);
                         }]
                     },
                     options: {
-                        scales: {
-                            y: {
-                                beginAtZero: true
-                            }
-                        }
                     }
                 });
             </script>
         </div>
     </div>
-    <hr>
+    <div class="column"></div>
+
     <footer>
+        <hr>
         <div class="footer logo">
             <a href="index.php"> <img src="css/images/logo.png" alt="Logo"> </a>
         </div>

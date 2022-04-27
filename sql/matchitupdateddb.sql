@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.5
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Generation Time: Apr 24, 2022 at 02:34 PM
--- Server version: 10.5.12-MariaDB
--- PHP Version: 7.3.32
+-- Host: 127.0.0.1
+-- Generation Time: Apr 26, 2022 at 04:22 PM
+-- Server version: 10.4.22-MariaDB
+-- PHP Version: 8.1.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -19,25 +18,32 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `id18657714_matchit`
+-- Database: `matchitfinal`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `about table`
+-- Table structure for table `abouttable`
 --
 
 CREATE TABLE `abouttable` (
-  `UserID` int(255) NOT NULL,
+  `unique_id` int(255) NOT NULL,
   `AboutID` int(255) DEFAULT NULL,
   `Rank` int(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `abouttable`
+--
+
+INSERT INTO `abouttable` (`unique_id`, `AboutID`, `Rank`) VALUES
+(857574117, 1, 1);
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `available about table`
+-- Table structure for table `availableabouttable`
 --
 
 CREATE TABLE `availableabouttable` (
@@ -46,10 +52,17 @@ CREATE TABLE `availableabouttable` (
   `Icon` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `availableabouttable`
+--
+
+INSERT INTO `availableabouttable` (`AboutID`, `Name`, `Icon`) VALUES
+(1, 'Brown Hair', '50');
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `available hobbies table`
+-- Table structure for table `availablehobbiestable`
 --
 
 CREATE TABLE `availablehobbiestable` (
@@ -58,17 +71,34 @@ CREATE TABLE `availablehobbiestable` (
   `Icon` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `availablehobbiestable`
+--
+
+INSERT INTO `availablehobbiestable` (`InterestID`, `Name`, `Icon`) VALUES
+(1, 'Cycling', '50'),
+(2, 'Running', '55');
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `blacklist table`
+-- Table structure for table `blacklisttable`
 --
 
 CREATE TABLE `blacklisttable` (
   `ID` int(255) NOT NULL,
   `Email` varchar(255) NOT NULL,
-  `Timestamp` datetime NOT NULL
+  `Timestamp` int(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `blacklisttable`
+--
+
+INSERT INTO `blacklisttable` (`ID`, `Email`, `Timestamp`) VALUES
+(576326227, '', 2323),
+(669511953, '', 33123),
+(1545844848, 'banned@account.com', 0);
 
 -- --------------------------------------------------------
 
@@ -76,7 +106,7 @@ CREATE TABLE `blacklisttable` (
 -- Table structure for table `chat table`
 --
 
-CREATE TABLE `chattable` (
+CREATE TABLE `chat table` (
   `ChatID` int(255) NOT NULL,
   `UserA_ID` int(255) NOT NULL,
   `UserB_ID` int(255) NOT NULL,
@@ -86,36 +116,54 @@ CREATE TABLE `chattable` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `gallery pictures table`
+-- Table structure for table `gallerypicturestable`
 --
 
 CREATE TABLE `gallerypicturestable` (
-  `UserID` int(255) DEFAULT NULL,
+  `unique_id` int(255) DEFAULT NULL,
   `GalleryPicture1` varchar(255) DEFAULT NULL,
   `GalleryPicture2` varchar(255) DEFAULT NULL,
   `GalleryPicture3` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `gallerypicturestable`
+--
+
+INSERT INTO `gallerypicturestable` (`unique_id`, `GalleryPicture1`, `GalleryPicture2`, `GalleryPicture3`) VALUES
+(857574117, '1650934334unknown.png', '1650934729IMG_2549.jpg', '1650934334Untitled123132.png');
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `hobbies table`
+-- Table structure for table `hobbiestable`
 --
 
 CREATE TABLE `hobbiestable` (
-  `UserID` int(255) DEFAULT NULL,
+  `unique_id` int(255) DEFAULT NULL,
   `InterestID` int(255) DEFAULT NULL,
   `Rank` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `hobbiestable`
+--
+
+INSERT INTO `hobbiestable` (`unique_id`, `InterestID`, `Rank`) VALUES
+(360432798, 1, 1),
+(360432798, 2, 2),
+(497396746, 1, 1),
+(857574117, 1, 1),
+(857574117, 2, 2);
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `location information`
+-- Table structure for table `locationinformation`
 --
 
 CREATE TABLE `locationinformation` (
-  `UserID` int(255) NOT NULL,
+  `unique_id` int(255) NOT NULL,
   `Address Line 1` varchar(255) DEFAULT NULL,
   `Address Line 2` varchar(255) DEFAULT NULL,
   `Address Line 3` varchar(255) DEFAULT NULL,
@@ -179,6 +227,8 @@ INSERT INTO `matchingtable` (`MatchID`, `UserA_ID`, `UserB_ID`, `ConnectionTimes
 (933108600, 1249584011, 1435685844, NULL, 'accepted'),
 (934827779, 1249584011, 1022157090, NULL, 'pending'),
 (990880504, 1237501525, 1435685844, NULL, 'pending'),
+(1006006229, 497396746, 669511953, NULL, 'accepted'),
+(1007400731, 497396746, 538883710, NULL, 'accepted'),
 (1079303833, 1237501525, 1435685844, NULL, 'pending'),
 (1138574761, 364563527, 1484749785, NULL, 'pending'),
 (1194347855, 1237501525, 1249584011, NULL, 'accepted'),
@@ -240,7 +290,7 @@ INSERT INTO `messages` (`msg_id`, `incoming_msg_id`, `outgoing_msg_id`, `Timesta
 -- Table structure for table `potential matches table`
 --
 
-CREATE TABLE `potentialmatchestable` (
+CREATE TABLE `potential matches table` (
   `ID` int(255) NOT NULL,
   `UserA_ID` int(255) NOT NULL,
   `UserB_ID` int(255) NOT NULL,
@@ -273,9 +323,11 @@ INSERT INTO `profiletable` (`unique_id`, `Age`, `Gender`, `Seeking`, `Descriptio
 (267614633, 0, 'female', 'male', '1', NULL, NULL, ''),
 (274050938, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (301519134, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(360432798, 0, '', '', '', NULL, NULL, ''),
 (360506766, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (364563527, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (419263115, 24, 'male', 'female', '', NULL, NULL, 'limerick'),
+(497396746, 18, 'male', 'female', 'FUnny', NULL, NULL, 'Limerick'),
 (518996865, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (538264511, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (538883710, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
@@ -283,6 +335,7 @@ INSERT INTO `profiletable` (`unique_id`, `Age`, `Gender`, `Seeking`, `Descriptio
 (619218455, 19, 'male', 'female', '123', NULL, NULL, '123'),
 (660239811, 77, 'male', '', '', NULL, NULL, ''),
 (669511953, 28, 'female', 'female', '', NULL, NULL, ''),
+(857574117, 12, 'male', 'female', '123', NULL, NULL, '123'),
 (864903232, 31, 'female', '', '', NULL, NULL, ''),
 (872836859, 1, 'male', 'male', '1', NULL, NULL, '1'),
 (907081927, -18, 'male', 'female', 'yung fella ', NULL, NULL, 'ireland'),
@@ -295,7 +348,8 @@ INSERT INTO `profiletable` (`unique_id`, `Age`, `Gender`, `Seeking`, `Descriptio
 (1435685844, 20, 'male', 'male', 'Cycling', NULL, NULL, 'Limerick'),
 (1466193977, 19, 'male', 'female', 'i like sandels', NULL, NULL, 'limerick'),
 (1484749785, 21, 'male', 'male', 'Running', NULL, NULL, 'Clare'),
-(1520320573, 28, 'female', '', '', NULL, NULL, '');
+(1520320573, 28, 'female', '', '', NULL, NULL, ''),
+(1545844848, 0, '', '', '', NULL, NULL, '');
 
 -- --------------------------------------------------------
 
@@ -310,7 +364,7 @@ CREATE TABLE `users` (
   `lname` varchar(255) DEFAULT NULL,
   `email` varchar(255) DEFAULT NULL,
   `password` varchar(255) DEFAULT NULL,
-  `Admin` binary(1) DEFAULT NULL,
+  `Admin` tinyint(1) DEFAULT NULL,
   `Completed` tinyint(1) DEFAULT NULL,
   `status` varchar(255) DEFAULT NULL,
   `img` varchar(255) DEFAULT NULL
@@ -346,35 +400,38 @@ INSERT INTO `users` (`user_id`, `unique_id`, `fname`, `lname`, `email`, `passwor
 (36, 360506766, '23412sfgdd', 'fgdasf', '1106745429@qq.com', '308eb4ab297ba480183256a47b4b05a6', NULL, 1, 'Offline now', '1649009184uTools_1648984407595.png'),
 (37, 128605450, '1', '1', 'cv@gmail.com', 'c4ca4238a0b923820dcc509a6f75849b', NULL, 1, 'Offline now', '1649010761b.png'),
 (38, 872836859, '1', '1', 's@gmail.com', 'c4ca4238a0b923820dcc509a6f75849b', NULL, 1, 'Active now', '1649011069b.png'),
-(39, 538883710, 'Nelly', 'Mc', 'nelly@email.com', '5f4dcc3b5aa765d61d8327deb882cf99', NULL, 1, 'Offline now', '1650551627istockphoto-1270067126-612x612.jpg');
+(39, 538883710, 'Nelly', 'Mc', 'nelly@email.com', '5f4dcc3b5aa765d61d8327deb882cf99', NULL, 1, 'Offline now', '1650551627istockphoto-1270067126-612x612.jpg'),
+(40, 497396746, 'Test', 'Account', 'test@account.com', 'c1cd38d7323924110c01c2cb3b2e03d0', 1, 1, 'Offline now', '1650811007spititout.jpg'),
+(41, 360432798, 'hungry', 'man', 'hungry@man.com', 'a6e43300cd419da1ffb3e8389919fa33', NULL, 1, 'Active now', '1650853737bog.png'),
+(43, 857574117, 'Admin', 'Account', 'admin@account.com', '21232f297a57a5a743894a0e4a801fc3', 1, 1, 'Active now', '1650897979spoons.jpg');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `about table`
+-- Indexes for table `abouttable`
 --
-ALTER TABLE `about table`
-  ADD KEY `UserID` (`UserID`),
+ALTER TABLE `abouttable`
+  ADD KEY `UserID` (`unique_id`),
   ADD KEY `AboutID` (`AboutID`);
 
 --
--- Indexes for table `available about table`
+-- Indexes for table `availableabouttable`
 --
-ALTER TABLE `available about table`
+ALTER TABLE `availableabouttable`
   ADD PRIMARY KEY (`AboutID`);
 
 --
--- Indexes for table `available hobbies table`
+-- Indexes for table `availablehobbiestable`
 --
-ALTER TABLE `available hobbies table`
+ALTER TABLE `availablehobbiestable`
   ADD PRIMARY KEY (`InterestID`);
 
 --
--- Indexes for table `blacklist table`
+-- Indexes for table `blacklisttable`
 --
-ALTER TABLE `blacklist table`
+ALTER TABLE `blacklisttable`
   ADD PRIMARY KEY (`ID`);
 
 --
@@ -384,23 +441,23 @@ ALTER TABLE `chat table`
   ADD PRIMARY KEY (`ChatID`);
 
 --
--- Indexes for table `gallery pictures table`
+-- Indexes for table `gallerypicturestable`
 --
-ALTER TABLE `gallery pictures table`
-  ADD KEY `UserID` (`UserID`);
+ALTER TABLE `gallerypicturestable`
+  ADD KEY `UserID` (`unique_id`);
 
 --
--- Indexes for table `hobbies table`
+-- Indexes for table `hobbiestable`
 --
-ALTER TABLE `hobbies table`
-  ADD KEY `UserID` (`UserID`),
+ALTER TABLE `hobbiestable`
+  ADD KEY `UserID` (`unique_id`),
   ADD KEY `InterestID` (`InterestID`);
 
 --
--- Indexes for table `location information`
+-- Indexes for table `locationinformation`
 --
-ALTER TABLE `location information`
-  ADD KEY `UserID` (`UserID`);
+ALTER TABLE `locationinformation`
+  ADD KEY `UserID` (`unique_id`);
 
 --
 -- Indexes for table `matchingtable`
@@ -440,7 +497,7 @@ ALTER TABLE `messages`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `user_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
