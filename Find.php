@@ -10,8 +10,8 @@ $hobbies = array();
 while($row2 = mysqli_fetch_assoc($insert_query)) {
     array_push($hobbies,$row2['Name']);
 }
-$rand = mt_rand(0,sizeof($hobbies)-1);
-$recommendation = $hobbies[$rand] ;
+/*$rand = mt_rand(0,sizeof($hobbies)-1);
+$recommendation = $hobbies[$rand] ;*/
 ?>
 <?php include_once "header.php"; ?>
 <html>
@@ -40,8 +40,8 @@ $recommendation = $hobbies[$rand] ;
         </div>
         <div class="header logo">
             <a href="index.php">
-                <img src="https://github.com/calvin224/MatchIt/blob/pagelinkingtest/css/images/title.png?raw=true">
-                <img src="https://github.com/calvin224/MatchIt/blob/pagelinkingtest/css/images/titlealt.png?raw=true" class="hover">
+                <img src="css/images/title.png">
+                <img src="css/images/titlealt.png" class="hover">
             </a>
         </div>
         <div class="search">
@@ -96,7 +96,7 @@ $recommendation = $hobbies[$rand] ;
     <hr>
     <footer>
         <div class="footer logo">
-            <a href="Welcome.php"> <img src="https://github.com/calvin224/MatchIt/blob/pagelinkingtest/css/images/logo.png?raw=true" alt="Logo"> </a>
+            <a href="Index.php"> <img src="https://github.com/calvin224/MatchIt/blob/pagelinkingtest/css/images/logo.png?raw=true" alt="Logo"> </a>
         </div>
     </footer>
 </div>
