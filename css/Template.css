@@ -1,0 +1,463 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+*::-webkit-scrollbar{
+    width: 0px;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+}
+.wrapper{
+    background: #ffff;
+    overflow: clip;
+}
+.wrapper header{
+    height: 40px;
+    margin-bottom: 60px;
+    display: flex;
+    width: 100vw;
+}
+header .button{
+    padding: 20px;
+    border: none;
+    background: none;
+    color: #67676a;
+    font-size: 50px;
+}
+header .button a{
+    color: inherit;
+    text-decoration: none;
+}
+header .button a:hover{
+    color: grey;
+}
+header .logo{
+    margin-top: 20px;
+    margin-left: auto;
+    width: 250px;
+    height: 50px;
+    margin-right: 3.5%;
+    position: relative;
+}
+header .logo .hover{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+header .logo:hover .hover{
+    display: inline;
+}
+header .logo img{
+    width: 250px;
+}
+header .notifications{
+    margin-left: auto;
+    padding: 20px;
+    border: none;
+    background: none;
+    color: #67676a;
+    font-size: 50px;
+}
+header .notifications a{
+    color: inherit;
+    text-decoration: none;
+}
+header .notifications a:hover{
+    color: grey;
+}
+header .profilepicture{
+    padding: 10px;
+    border: none;
+    background: none;
+    color: #67676a;
+    font-size: 50px;
+}
+header .profilepicture img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    align-items: center;
+    object-fit: cover;
+    border: 3px solid #C3C8D3;
+}
+header .profilepicture img:hover{
+    border: 3px solid #666F80;
+}
+* {
+    box-sizing: border-box;
+}
+
+/* Top Column; Profiler, Name, Age, Location. */
+.topcolumn {
+    float: top;
+    width: 100%;
+    height: 150px;
+    background-image: linear-gradient(to bottom, white 20%, coral);
+}
+.profile-picture{
+}
+.profile-picture img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    border: 5px #67676a;
+    object-fit: cover;
+    height: 140px;
+    width: 140px;
+}
+.topdetails{
+    padding: 10px;
+    line-height: 25px;
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    color: #112A46;
+}
+/* Top Column; Profiler, Name, Age, Location. */
+/* Middle Column; Traits, Traits. */
+.Traits{
+    width: auto;
+    height: auto ;
+    padding: 10px;
+    text-align: center;
+    background-color: whitesmoke;
+    border-radius: 25px;
+    color: #112A46;
+}
+.textpill {
+    align-content: center;
+    font-weight: bold; /* Making font bold */
+    border: 2px solid white;
+    border-radius: 20px; /* Making border radius */
+    width: fit-content;
+    height: auto;
+    padding: 5px 30px 5px 30px; /* Making space around letters */
+    margin-bottom: 5px;
+    font-size: 18px;
+    background-color: whitesmoke;
+}
+
+.Characteristics{
+    display: grid;
+    width: 33.33%;
+}
+
+.About h2{
+    text-align: center;
+    color: #112A46;
+}
+.About p{
+    margin-top: 12px;
+    min-height: 175px;
+    height: auto ;
+    text-align: center;
+    background-color: whitesmoke;
+    border-radius: 25px;
+    padding: 10px;
+    line-height: 30px;
+    color: #112A46;
+}
+.Characteristics{
+    text-align: center;
+}
+.Characteristics h2{
+    margin-bottom: 10px;
+}
+.container {
+    display: flex;
+    flex-flow: row wrap;
+    align-content: space-between;
+    justify-content: center;
+    gap: 5px;
+}
+.Characteristics p{
+
+    align-content: center;
+    font-weight: bold; /* Making font bold */
+    border: 2px solid white;
+    border-radius: 20px; /* Making border radius */
+    width: fit-content;
+    height: fit-content;
+    padding: 5px 30px 5px 30px; /* Making space around letters */
+    margin-bottom: 5px;
+    margin-right: 5px;
+    font-size: 18px;
+    background-color: whitesmoke;
+}
+.Interests p{
+    align-content: center;
+    font-weight: bold; /* Making font bold */
+    border: 2px solid white;
+    border-radius: 20px; /* Making border radius */
+    width: fit-content;
+    height: auto;
+    padding: 5px 30px 5px 30px; /* Making space around letters */
+    margin-bottom: 5px;
+    font-size: 18px;
+    background-color: whitesmoke;
+}
+.column {
+    float: left;
+    text-align: center;
+    width: 33.33%;
+    height: 500px; /* Should be removed. Only for demonstration */
+}
+
+.column h2{
+    padding: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* slideshow */
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+/* Slideshow container */
+/* Next & previous buttons */
+.prev{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: 5%;
+    margin-left: -15%;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: 5%;
+    margin-right: 2%;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+    .prev, .next,.text {font-size: 11px}
+}
+/*
+.columns{
+    margin-left: 5vw;
+    margin-right: 5vw;
+    padding: 30px;
+    background-color: #C3C8D3;
+    position: relative;
+    display: flex;
+    border-radius: 10px;
+}
+.col1{
+    position: relative;
+    height: 80vh;
+    width: 40vw;
+    align-items: center;
+    background-image: linear-gradient(#8F85D1, #7E75B7);
+    border-radius: 10px;
+}
+.picture{
+    margin-left: auto;
+    margin-right: auto;
+}
+.picture img{
+    width: 30%;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+.attributes{
+    margin: auto;
+    border-radius: 50px;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    background: #fff;
+    padding: 5px;
+    gap: 10px;
+}
+.attributes img{
+    width: 15%;
+    border-radius: 50%;
+    box-shadow: 0 0 128px 0 rgba(0,0,0,0.1),
+    0 32px 64px -48px rgba(0,0,0,0.5);
+}
+.details{
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 65%;
+    text-align: center;
+    font-size: x-large;
+}
+.details p{
+    margin: 0;
+    padding: 0;
+}
+.about{
+    border-radius: 5px ;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 50%;
+    width: 60%;
+    overflow-y: auto;
+    border: 1px solid black;
+    background-color: #ffffff;
+    text-align: center;
+}
+.about::-webkit-scrollbar{
+    width: 0px;
+}
+.col2{
+    position: relative;
+    height: 80vh;
+    margin-left: 8vw;
+    margin-right: 8vw;
+    border-radius: 10px;
+}
+.bioheader{
+    text-align: center;
+    font-size: 30px;
+}
+.bio{
+    border-radius: 5px;
+    text-align: center;
+    align-self: center;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 80%;
+    width: 25vw;
+    overflow-y: auto;
+    background-color: #ffffff;
+    border: 1px solid black;
+}
+.about::-webkit-scrollbar{
+    width: 0px;
+}
+.col3{
+    position: relative;
+    height: 80vh;
+    width: 35vw;
+    background-image: linear-gradient(#8F85D1, #7E75B7);
+    border-radius: 10px;
+}
+.gallery{
+    align-content: center;
+    width: auto;
+    margin-top: 50px;
+    margin-bottom: 250px;
+    gap: 10px;
+}
+.gallery img{
+    object-fit: cover;
+    width: 220px;
+    height: 220px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid grey;
+    box-shadow: 0 0 128px 0 rgba(0,0,0,0.1),
+    0 32px 64px -48px rgba(0,0,0,0.5);
+}
+*/
+.wrapper footer{
+    margin-top: 10px;
+    margin-bottom: 60px;
+    width: 100vw;
+}
+footer .logo{
+    margin-top: 50px;
+    width: 90px;
+}
+footer .logo img{
+    height: 80px;
+}
+footer .logo a{
+    color: inherit;
+    text-decoration: none;
+}

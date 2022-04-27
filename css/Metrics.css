@@ -1,0 +1,126 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+*::-webkit-scrollbar{
+    width: 0px;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.wrapper{
+    background: #ffff;
+    overflow: clip;
+}
+.wrapper header{
+    height: 40px;
+    margin-bottom: 60px;
+    display: flex;
+    width: 100vw;
+}
+header .button{
+    padding: 20px;
+    border: none;
+    background: none;
+    color: #67676a;
+    font-size: 50px;
+}
+header .button a{
+    color: inherit;
+    text-decoration: none;
+}
+header .button a:hover{
+    color: grey;
+}
+header .logo{
+    margin-top: 20px;
+    margin-left: auto;
+    width: 250px;
+    height: 50px;
+    margin-right: 3.5%;
+    position: relative;
+}
+header .logo .hover{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+header .logo:hover .hover{
+    display: inline;
+}
+header .logo img{
+    width: 250px;
+}
+header .notifications{
+    margin-left: auto;
+    padding: 20px;
+    border: none;
+    background: none;
+    color: #67676a;
+    font-size: 50px;
+}
+header .notifications a{
+    color: inherit;
+    text-decoration: none;
+}
+header .notifications a:hover{
+    color: grey;
+}
+header .profilepicture{
+    padding: 10px;
+    border: none;
+    background: none;
+    color: #67676a;
+    font-size: 50px;
+}
+header .profilepicture img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    align-items: center;
+    object-fit: cover;
+    border: 3px solid #C3C8D3;
+}
+header .profilepicture img:hover{
+    border: 3px solid #666F80;
+}
+.column {
+    background-image: linear-gradient(white 50%, #7E75B7);
+    float: left;
+    text-align: center;
+    width: 33.33%;
+    height: 500px; /* Should be removed. Only for demonstration */
+}
+
+
+.metrics th{
+    padding: 10px;
+}
+.metrics h1{
+    padding-top: 10px;
+}
+
+.wrapper footer{
+    margin-top: 10px;
+    margin-bottom: 60px;
+    width: 100vw;
+}
+footer .logo{
+    margin-top: 50px;
+    width: 90px;
+}
+footer .logo img{
+    height: 80px;
+}
+footer .logo a{
+    color: inherit;
+    text-decoration: none;
+}
