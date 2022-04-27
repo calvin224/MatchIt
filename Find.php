@@ -72,7 +72,6 @@ if(!isset($_SESSION['unique_id'])){
                 </section>
             </div>
         </div>
-        </form>
         <div class="header notifications">
             <a href="Notifications.php" title="Notifications"> <i class="fa-solid fa-bell"></i> </a>
         </div>

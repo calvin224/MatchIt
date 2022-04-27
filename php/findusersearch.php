@@ -17,7 +17,11 @@ $output = '<table class="findtable">
             <tbody>';
 if($searchTerm != ""){
 $search = explode(",",$searchTerm);
-$sql = "SELECT * from users LEFT JOIN profiletable ON profiletable.unique_id=users.unique_id WHERE Completed = {$true} AND NOT users.unique_id = {$outgoing_id} ORDER BY user_id DESC;";
+    $sql3 = mysqli_query($conn, "SELECT * FROM profiletable WHERE unique_id = {$outgoing_id}");
+    if (mysqli_num_rows($sql3) > 0) {
+        $row3 = mysqli_fetch_assoc($sql3);
+    }
+$sql = "SELECT * from users LEFT JOIN profiletable ON profiletable.unique_id=users.unique_id WHERE Completed = {$true} AND profiletable.Gender = '{$row3['Seeking']}' AND NOT users.unique_id = {$outgoing_id} ORDER BY user_id DESC;";
 $query = mysqli_query($conn, $sql);
 if(mysqli_num_rows($query) > 0){
     while($row = mysqli_fetch_assoc($query)){

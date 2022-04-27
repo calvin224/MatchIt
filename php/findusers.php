@@ -3,14 +3,13 @@ session_start();
 include_once "config.php";
 $outgoing_id = $_SESSION['unique_id'];
 $true = 1;
-$sql2 = mysqli_query($conn, "SELECT * FROM profiletable WHERE unique_id = $outgoing_id");
+$sql2 = mysqli_query($conn, "SELECT * FROM profiletable WHERE unique_id = {$outgoing_id}");
 if (mysqli_num_rows($sql2) > 0) {
     $row = mysqli_fetch_assoc($sql2);
 }
-$seeking = $row['Seeking'];
-
 $gender = $row['Gender'];
-$sql = "SELECT * from users LEFT JOIN profiletable ON profiletable.unique_id=users.unique_id WHERE Completed = {$true} 
+$sql = "SELECT * from users LEFT JOIN profiletable ON profiletable.unique_id=users.unique_id WHERE Completed = {$true}
+                                                  AND profiletable.Gender = '{$row['Seeking']}'                                
                                                   AND NOT users.unique_id = {$outgoing_id}
                                                   ORDER BY user_id DESC;";
 $query = mysqli_query($conn, $sql);
