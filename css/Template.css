@@ -101,27 +101,163 @@ header .profilepicture img:hover{
     float: top;
     width: 100%;
     height: 150px;
-    background-image: linear-gradient(to bottom, white 20%, coral);
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+.modalBackgroundColourEdit{
+    margin-left: auto;
+    margin-top: auto;
+}
+.modalBackgroundColourEdit button{
+    position: relative;
+    z-index: 1;
+    width: 47px;
+    height: 42px;
+    font-size: 17px;
+    cursor: pointer;
+    border: none;
+    background: #fff;
+    color: #333;
+    outline: none;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+    margin-bottom: 5px;
+}
+.modalBackgroundColourEdit button.active{
+    background: #333;
+    color: #fff;
+}
+.modalBackgroundColourEdit button.active i::before{
+    content: '\f00d';
+}
+.modalProfileDetailsEdit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.modalProfileDetailsEdit button{
+    position: relative;
+    z-index: 1;
+    width: 47px;
+    height: 42px;
+    font-size: 17px;
+    cursor: pointer;
+    border: none;
+    background: #fff;
+    color: #333;
+    outline: none;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+    margin-bottom: 5px;
+}
+.modalProfileDetailsEdit button.active{
+    background: #333;
+    color: #fff;
+}
+.modalProfileDetailsEdit button.active i::before{
+    content: '\f00d';
+}
+.modalGenderSeekingEdit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.modalGenderSeekingEdit button{
+    position: relative;
+    z-index: 101;
+    width: 47px;
+    height: 42px;
+    font-size: 17px;
+    cursor: pointer;
+    border: none;
+    background: #fff;
+    color: #333;
+    outline: none;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+    margin-bottom: 5px;
+}
+.modalGenderSeekingEdit button.active{
+    background: #333;
+    color: #fff;
+}
+.modalGenderSeekingEdit button.active i::before{
+    content: '\f00d';
+}
+.modalBioEdit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.modalBioEdit button{
+    position: relative;
+    z-index: 101;
+    width: 47px;
+    height: 42px;
+    font-size: 17px;
+    cursor: pointer;
+    border: none;
+    background: #fff;
+    color: #333;
+    outline: none;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+    margin-bottom: 5px;
+}
+.modalBioEdit button.active{
+    background: #333;
+    color: #fff;
+}
+.modalBioEdit button.active i::before{
+    content: '\f00d';
+}
+.modalGalleryPicturesEdit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.modalGalleryPicturesEdit button{
+    position: relative;
+    z-index: 101;
+    width: 47px;
+    height: 42px;
+    font-size: 17px;
+    cursor: pointer;
+    border: none;
+    background: #fff;
+    color: #333;
+    outline: none;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+    margin-bottom: 5px;
+}
+.modalGalleryPicturesEdit button.active{
+    background: #333;
+    color: #fff;
+}
+.modalGalleryPicturesEdit button.active i::before{
+    content: '\f00d';
 }
 .profile-picture{
+    position: absolute;
 }
 .profile-picture img{
     display: block;
-    margin-left: auto;
-    margin-right: auto;
     border-radius: 50%;
     border: 5px #67676a;
     object-fit: cover;
-    height: 140px;
-    width: 140px;
+    height: 135px;
+    width: 135px;
 }
 .topdetails{
-    padding: 10px;
     line-height: 25px;
-    display: block;
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 20px auto 20px;
     color: #112A46;
 }
 
@@ -136,7 +272,313 @@ header .profilepicture img:hover{
     border-radius: 25px;
     color: #112A46;
 }
-.textpill {
+
+.About h2{
+    text-align: center;
+    padding-top: 10px;
+    color: #112A46;
+}
+.About p{
+    margin-top: 12px;
+    min-height: 215px;
+    height: auto ;
+    text-align: center;
+    background-color: whitesmoke;
+    border-radius: 25px;
+    padding: 10px;
+    line-height: 30px;
+    color: #112A46;
+}
+.modalCharacteristicsEdit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.modalCharacteristicsEdit button{
+    position: relative;
+    z-index: 1;
+    width: 47px;
+    height: 42px;
+    font-size: 17px;
+    cursor: pointer;
+    border: none;
+    background: #fff;
+    color: #333;
+    outline: none;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+    margin-bottom: 5px;
+}
+.modalCharacteristicsEdit button.active{
+    background: #333;
+    color: #fff;
+}
+.modalCharacteristicsEdit button.active i::before{
+    content: '\f00d';
+}
+.modalHobbiesInterestsEdit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.modalHobbiesInterestsEdit button{
+    position: relative;
+    z-index: 1;
+    width: 47px;
+    height: 42px;
+    font-size: 17px;
+    cursor: pointer;
+    border: none;
+    background: #fff;
+    color: #333;
+    outline: none;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+    margin-bottom: 5px;
+}
+.modalHobbiesInterestsEdit button.active{
+    background: #333;
+    color: #fff;
+}
+.modalHobbiesInterestsEdit button.active i::before{
+    content: '\f00d';
+}
+/* The Modal (background) */
+.modalCharacteristics {
+    opacity: 0;
+    display: block; /* Hidden by default */
+    position: absolute; /* Stay in place */
+    z-index: 100; /* Sit on top */
+    margin-top: 295px;
+    left: 0;
+    top: 0;
+    width: 33vw; /* Full width */
+    height: 250px; /* Full height */
+    padding: 10px 50px;
+    overflow: auto;
+}
+.modalHobbiesInterests {
+    opacity: 0;
+    display: block; /* Hidden by default */
+    position: absolute; /* Stay in place */
+    z-index: 100; /* Sit on top */
+    margin-top: 595px;
+    left: 0;
+    top: 0;
+    width: 33vw; /* Full width */
+    height: 250px; /* Full height */
+    padding: 10px 50px;
+    align-content: center;
+    overflow: auto;
+}
+/* The Modal (background) */
+.modalBackgroundColour {
+    opacity: 0;
+    display: block; /* Hidden by default */
+    position: absolute; /* Stay in place */
+    z-index: 100; /* Sit on top */
+    margin-top: 80px;
+    right: 47px;
+    top: 0;
+    width: 33vw; /* Full width */
+    height: 250px; /* Full height */
+    padding: 10px 50px;
+    overflow: auto;
+}
+.modalProfileDetails {
+    opacity: 0;
+    display: block; /* Hidden by default */
+    position: absolute; /* Stay in place */
+    z-index: 100; /* Sit on top */
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 33vw; /* Full width */
+    height: 250px; /* Full height */
+    padding: 10px 30px;
+    overflow: auto;
+}
+.modalGenderSeeking {
+    opacity: 0;
+    display: block; /* Hidden by default */
+    position: absolute; /* Stay in place */
+    z-index: 100; /* Sit on top */
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 33vw; /* Full width */
+    height: 250px; /* Full height */
+    padding: 10px 30px;
+    overflow: auto;
+}
+.modalBio {
+    opacity: 0;
+    display: block; /* Hidden by default */
+    position: absolute; /* Stay in place */
+    z-index: 100; /* Sit on top */
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 33vw; /* Full width */
+    height: 250px; /* Full height */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    overflow: auto;
+}
+.modalGalleryPictures {
+    opacity: 0;
+    display: block; /* Hidden by default */
+    position: absolute; /* Stay in place */
+    z-index: 100; /* Sit on top */
+    margin-top: 35px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 33vw; /* Full width */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    overflow: auto;
+}
+.modalCharacteristics.show{
+    opacity: 1;
+}
+.modalHobbiesInterests.show{
+    opacity: 1;
+}
+.modalBackgroundColour.show{
+    opacity: 1;
+}
+.modalProfileDetails.show{
+    opacity: 1;
+}
+.modalGenderSeeking.show{
+    opacity: 1;
+}
+.modalBio.show{
+    opacity: 1;
+}
+.modalGalleryPictures.show{
+    opacity: 1;
+}
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    padding: 20px;
+    height: auto;
+    border-radius: 20px;
+}
+.modalBackgroundColour .modal-content {
+    background-color: rgba(245, 242, 242, 0.3);
+    padding: 20px;
+    height: auto;
+    border-radius: 20px;
+}
+.modalGalleryPictures .modal-content {
+    padding: 20px;
+    height: 650px;
+    border-radius: 20px;
+}
+.modalBio .Bio input{
+    width: 25vw;
+    height: 150px;
+    border: none;
+}
+.modalBio .Bio{
+    border: none;
+}
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.Characteristics{
+    text-align: center;
+    height: 300px;
+}
+.Characteristics h2{
+    margin-bottom: 10px;
+}
+.CharacteristicsList{
+    display: flex;
+    flex-flow: row wrap;
+    gap: 10px;
+}
+.HobbiesInterests{
+    text-align: center;
+    height: 300px;
+}
+.HobbiesInterests h2{
+    margin-bottom: 10px;
+}
+.HobbiesInterestsList{
+    display: flex;
+    flex-flow: row wrap;
+    gap: 10px;
+}
+.CharacteristicsList{
+    display: flex;
+    flex-flow: row wrap;
+    text-align: left;
+    justify-content: space-between;
+    padding-left: 50px;
+    padding-right: 50px;
+    gap: 10px;
+}
+.GalleryPictures{
+    display: flex;
+    flex-flow: row wrap;
+    text-align: left;
+    justify-content: left;
+    padding-left: 50px;
+    padding-right: 50px;
+    gap: 10px;
+}
+.characteristicscontainer{
+    height: 300px;
+}
+.HobbiesInterests{
+    text-align: center;
+    height: 300px;
+}
+.HobbiesInterests h2{
+    margin-bottom: 10px;
+}
+.HobbiesInterestsList{
+    display: flex;
+    flex-flow: row wrap;
+    text-align: left;
+    justify-content: space-between;
+    gap: 10px;
+}
+.BackgroundColourPicker{
+    display: flex;
+    flex-flow: row wrap;
+    text-align: left;
+    justify-content: center;
+    gap: 10px;
+}
+.backgroundcolourpickerform{
+    text-align: center;
+}
+.container {
+    display: flex;
+    flex-flow: row wrap;
+    align-content: space-between;
+    justify-content: center;
+    gap: 5px;
+    max-height: 250px;
+}
+.Characteristics p{
     align-content: center;
     font-weight: bold; /* Making font bold */
     border: 2px solid white;
@@ -148,55 +590,7 @@ header .profilepicture img:hover{
     font-size: 18px;
     background-color: whitesmoke;
 }
-
-.Characteristics{
-    display: grid;
-    width: 33.33%;
-}
-
-.About h2{
-    text-align: center;
-    color: #112A46;
-}
-.About p{
-    margin-top: 12px;
-    min-height: 175px;
-    height: auto ;
-    text-align: center;
-    background-color: whitesmoke;
-    border-radius: 25px;
-    padding: 10px;
-    line-height: 30px;
-    color: #112A46;
-}
-.Characteristics{
-    text-align: center;
-}
-.Characteristics h2{
-    margin-bottom: 10px;
-}
-.container {
-    display: flex;
-    flex-flow: row wrap;
-    align-content: space-between;
-    justify-content: center;
-    gap: 5px;
-}
-.Characteristics p{
-
-    align-content: center;
-    font-weight: bold; /* Making font bold */
-    border: 2px solid white;
-    border-radius: 20px; /* Making border radius */
-    width: fit-content;
-    height: fit-content;
-    padding: 5px 30px 5px 30px; /* Making space around letters */
-    margin-bottom: 5px;
-    margin-right: 5px;
-    font-size: 18px;
-    background-color: whitesmoke;
-}
-.Interests p{
+.HobbiesInterests p{
     align-content: center;
     font-weight: bold; /* Making font bold */
     border: 2px solid white;
@@ -212,11 +606,8 @@ header .profilepicture img:hover{
     float: left;
     text-align: center;
     width: 33.33%;
-    height: 500px; /* Should be removed. Only for demonstration */
-}
-
-.column h2{
     padding: 10px;
+    height: 750px; /* Should be removed. Only for demonstration */
 }
 
 
@@ -242,6 +633,7 @@ img {vertical-align: middle;}
 .prev{
     cursor: pointer;
     position: absolute;
+    z-index: 101;
     top: 50%;
     width: auto;
     padding: 16px;
@@ -257,6 +649,7 @@ img {vertical-align: middle;}
 .next {
     cursor: pointer;
     position: absolute;
+    z-index: 101;
     top: 50%;
     width: auto;
     padding: 16px;

@@ -7,6 +7,7 @@ let deletebtn = document.getElementById("deletebtn");
 // Adding event listener to button
 tempbanbtn.addEventListener("click", () => {
         var retVal = prompt("Enter ban length in hours");
+        var banLength = retVal * 3600000;
         $.post('php/Banning.php', {
             retVal: retVal,
             btnValue: 1
@@ -17,7 +18,7 @@ tempbanbtn.addEventListener("click", () => {
                 btnValue: 2
             }, (response) => {
             });
-        }, retVal);
+        }, banLength);
 });
 
 permbanbtn.addEventListener("click", () => {
