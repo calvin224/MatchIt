@@ -114,6 +114,16 @@
         <br>
         <p>You should use these initial messages to 'break-the-ice!' because after this period you're free to communicate as frequently (or infrequently)
             as you both desire.</p>
+        <br  id="Traits">
+        <div class="Traits">
+        <p style="margin-top: 10%">Traits:</p>
+            <br>
+        <p>New Hatch ! &#x1F423 : The User Has Just Joined Match-it!</p>
+        <p>Frosty ! &#x2744 : The User Has Not Replied to a Matches' Greeting Message.</p>
+        <p>On-Fire ! &#x1F525 : The User Has at Some Stage Had The Most Messages Sent.</p>
+        <p>Top User ! &#x1F947 : The User Has at Some Stage Had the Most Match Requests on match-it!</p>
+        <p>Ghost ! &#x1F47B : Boo ! This User Has Not Been Active For 24hrs.</p>
+        </div>
     </div>
 <!-- About End !-->
 

@@ -96,7 +96,7 @@ $recommendation = $hobbies[$rand] ;*/
     <hr>
     <footer>
         <div class="footer logo">
-            <a href="Index.php"> <img src="https://github.com/calvin224/MatchIt/blob/pagelinkingtest/css/images/logo.png?raw=true" alt="Logo"> </a>
+            <a href="index.php"> <img src="css/images/logo.png" alt="Logo"> </a>
         </div>
     </footer>
 </div>

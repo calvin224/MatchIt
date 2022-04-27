@@ -124,6 +124,7 @@ header .profilepicture img:hover{
     margin-right: auto;
     color: #112A46;
 }
+
 /* Top Column; Profiler, Name, Age, Location. */
 /* Middle Column; Traits, Traits. */
 .Traits{
@@ -218,6 +219,7 @@ header .profilepicture img:hover{
     padding: 10px;
 }
 
+
 /* Clear floats after the columns */
 .row:after {
     content: "";
@@ -225,6 +227,11 @@ header .profilepicture img:hover{
     clear: both;
 }
 
+
+mySlides .img{
+    max-height: 80%;
+    object-fit: cover;
+}
 /* slideshow */
 * {box-sizing: border-box}
 body {font-family: Verdana, sans-serif; margin:0}
@@ -448,12 +455,10 @@ img {vertical-align: middle;}
 }
 */
 .wrapper footer{
-    margin-top: 10px;
-    margin-bottom: 60px;
+    margin: 10px;
     width: 100vw;
 }
 footer .logo{
-    margin-top: 50px;
     width: 90px;
 }
 footer .logo img{

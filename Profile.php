@@ -94,7 +94,7 @@ if(mysqli_num_rows($sql4) > 0){
                 <h3><?php echo $row['fname']. " " . $row['lname'] ?> <p><?php echo $age ?> <p><?php echo $row2['Location'] ?></p></h3>
             </div>
             <div class ="Traits">
-                <h1>&#x1F423 &#x2744 &#x1F525 &#x1F947 &#x1F47B</h1>
+                <h1> <a href="index.php#Traits"> &#x2744 &#x1F525 &#x1F947 &#x1F47B</a></h1>
             </div>
             <div class="About">
                 <h2>Bio:</h2>
