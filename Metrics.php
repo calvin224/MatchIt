@@ -44,7 +44,7 @@ $Othercount = mysqli_num_rows($sqlCountOther);
             <a href="Find.php" title="Find Someone"<i class="fa-solid fa-magnifying-glass"></i> </a>
         </div>
         <div class="header logo">
-            <a href="Welcome.php">
+            <a href="Index.php">
                 <img src="css/images/title.png">
                 <img src="css/images/titlealt.png" class="hover">
             </a>

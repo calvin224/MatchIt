@@ -23,6 +23,8 @@ body{
     margin-bottom: 60px;
     display: flex;
     width: 100vw;
+    align-content: center;
+    justify-content: center;
 }
 header .button{
     padding: 20px;
@@ -40,11 +42,9 @@ header .button a:hover{
 }
 header .logo{
     margin-top: 20px;
-    margin-left: 19.5%;
-    margin-right: 5%;
     width: 250px;
     height: 50px;
-    position: relative;
+    position: absolute;
 }
 header .logo .hover{
     display: none;
@@ -149,7 +149,7 @@ header .search button{
     background: #fff;
     color: #333;
     outline: none;
-    border-radius: 0 5px 5px 0;
+    border-radius: 100px;
     transition: all 0.2s ease;
 }
 header .search button.active{

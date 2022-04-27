@@ -30,7 +30,7 @@
     </div>
 
     <div class="successstories">
-        <h1>Success Stories:</h1>
+        <h1>Successful Matches:</h1>
     </div>
 
     <style>
@@ -38,6 +38,7 @@
             margin-left: 4%;
             margin-top: 20px;
             border: 1px solid #ccc;
+            border-radius: 25px;
             float: left;
             width: 20%;
         }
@@ -48,6 +49,8 @@
 
         div.gallery img {
             width: 100%;
+            border-top-left-radius:  25px;
+            border-top-right-radius: 25px;
             height: auto;
         }
 
@@ -59,28 +62,28 @@
     </style>
 
     <div class="gallery">
-        <a target="_blank" href="css/images/Couple1.jpg">
+        <a target="_blank">
             <img src="css/images/Couple1.jpg" alt="Joe and Anna" width="600" height="400">
         </a>
         <div class="desc"> Anna (23) and Joe (25)</div>
     </div>
 
     <div class="gallery">
-        <a target="_blank" href="css/images/Couple2.jpg">
+        <a target="_blank">
             <img src="css/images/Couple2.jpg" alt="Leah and Kate" width="600" height="400">
         </a>
         <div class="desc">Leah (27) and Kate (31)</div>
     </div>
 
     <div class="gallery">
-        <a target="_blank" href="css/images/Couple3.jpg">
+        <a target="_blank">
             <img src="css/images/Couple3.jpg" alt="Jake and Meabh" width="600" height="400">
         </a>
         <div class="desc">Jake (20) and Méabh (21)</div>
     </div>
 
     <div class="gallery">
-        <a target="_blank" href="css/images/Couple4.jpg">
+        <a target="_blank">
             <img src="css/images/Couple4.jpg" alt="Martin and Olivia" width="600" height="400">
         </a>
         <div class="desc">Martin (45) and Olivia (39)</div>

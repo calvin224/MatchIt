@@ -23,6 +23,8 @@ body{
     margin-bottom: 60px;
     display: flex;
     width: 100vw;
+    align-content: center;
+    justify-content: center;
 }
 header .button{
     padding: 20px;
@@ -40,11 +42,9 @@ header .button a:hover{
 }
 header .logo{
     margin-top: 20px;
-    margin-left: auto;
     width: 250px;
     height: 50px;
-    margin-right: 3.5%;
-    position: relative;
+    position: absolute;
 }
 header .logo .hover{
     display: none;
