@@ -16,6 +16,11 @@ $Femalecount = mysqli_num_rows($sqlCountFemales);
 $sqlCountOther = mysqli_query($conn, "select * FROM profiletable WHERE Gender = 'other'");
 $Othercount = mysqli_num_rows($sqlCountOther);
 
+$insert_querytophobby= mysqli_query($conn, "SELECT * , COUNT(hobbiestable.InterestID) as totalcount from hobbiestable JOIN availablehobbiestable ON hobbiestable.InterestID GROUP BY hobbiestable.InterestID ORDER BY totalcount DESC;");
+$tophobbyarray = array();
+while ($row2 = mysqli_fetch_assoc($insert_querytophobby)) {
+    array_push($tophobbyarray, $row2['Name']);
+}
 
 ?>
 <?php include_once "header.php"; ?>
@@ -63,10 +68,12 @@ $Othercount = mysqli_num_rows($sqlCountOther);
                 <tr>
                     <th>Amount of Users</th>
                     <th>Number Of Matches</th>
+                    <th>Most popular hobby</th>
                 </tr>
                 <tr>
                     <td><?php echo $Usercount ?></td>
                     <td><?php echo $Matchcount ?></td>
+                    <td><?php echo $tophobbyarray[0] ?></td>
                 </tr>
             </table>
         </div>
