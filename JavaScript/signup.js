@@ -15,6 +15,13 @@ continueBtn.onclick = ()=>{
                 let data = xhr.response;
                 if(data === "success"){
                     location.href="Profile.php";
+                    setTimeout(() =>{
+                        $.post('php/Traits.php', {
+                            btnValue: 1
+                        }, (response) => {
+                        });
+                        }
+                   ,24)
                 }else{
                     errorText.style.display = "block";
                     errorText.textContent = data;
