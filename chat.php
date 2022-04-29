@@ -22,7 +22,7 @@ $_SESSION['TheirID'] = $row;
     <section class="chat-area">
         <header>
             <a href="users.php" class="back-icon"><i class="fas fa-arrow-left"></i></a>
-            <a href="TheirProfile.php"> <img src="php/images/<?php echo $row['img']; ?>" alt=""> </a>
+            <a href="OutMatchProfile.php"> <img src="php/images/<?php echo $row['img']; ?>" alt=""> </a>
             <div class="details">
                 <span><?php echo $row['fname']. " " . $row['lname'] ?></span>
                 <p><?php echo $row['status']; ?></p>
