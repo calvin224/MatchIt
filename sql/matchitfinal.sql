@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 27, 2022 at 04:00 PM
+-- Generation Time: Apr 29, 2022 at 08:40 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -33,6 +33,36 @@ CREATE TABLE `abouttable` (
   `Rank` int(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `abouttable`
+--
+
+INSERT INTO `abouttable` (`unique_id`, `AboutID`, `Rank`) VALUES
+(1596368926, 29, 1),
+(1596368926, 1, 1),
+(1596368926, 6, 1),
+(1596368926, 12, 1),
+(1596368926, 21, 1),
+(1596368926, 24, 1),
+(157434744, 27, 1),
+(157434744, 1, 1),
+(157434744, 8, 1),
+(157434744, 12, 1),
+(157434744, 20, 1),
+(157434744, 24, 1),
+(380519091, 27, 1),
+(380519091, 1, 1),
+(380519091, 8, 1),
+(380519091, 12, 1),
+(380519091, 21, 1),
+(380519091, 24, 1),
+(918324180, 28, 1),
+(918324180, 2, 1),
+(918324180, 7, 1),
+(918324180, 13, 1),
+(918324180, 21, 1),
+(918324180, 23, 1);
+
 -- --------------------------------------------------------
 
 --
@@ -50,6 +80,7 @@ CREATE TABLE `availableabouttable` (
 --
 
 INSERT INTO `availableabouttable` (`AboutID`, `Name`, `Icon`) VALUES
+(1, 'Brown Hair', '1'),
 (2, 'Blonde Hair', '1'),
 (3, 'Black Hair', '1'),
 (4, 'Red Hair', '1'),
@@ -71,7 +102,7 @@ INSERT INTO `availableabouttable` (`AboutID`, `Name`, `Icon`) VALUES
 (20, 'Short', '1'),
 (21, 'Average', '1'),
 (22, 'Tall', '1'),
-(23, 'Skinny', '1'),
+(23, 'Thin', '1'),
 (24, 'Average', '1'),
 (25, 'Full Figured', '1'),
 (26, 'Dad Bod', '1'),
@@ -181,6 +212,13 @@ CREATE TABLE `blacklisttable` (
   `Timestamp` int(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `blacklisttable`
+--
+
+INSERT INTO `blacklisttable` (`ID`, `Email`, `Timestamp`) VALUES
+(157434744, 'sarah@gmail.com', 0);
+
 -- --------------------------------------------------------
 
 --
@@ -207,6 +245,15 @@ CREATE TABLE `gallerypicturestable` (
   `GalleryPicture3` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `gallerypicturestable`
+--
+
+INSERT INTO `gallerypicturestable` (`unique_id`, `GalleryPicture1`, `GalleryPicture2`, `GalleryPicture3`) VALUES
+(1596368926, '1651254100galleryphoto1.png', '1651254100galleryphoto2.png', '1651254100galleryphoto3.png'),
+(380519091, '1651254964galleryphoto1.png', '1651254964galleryphoto2.png', '1651254964galleryphoto3.png'),
+(918324180, '1651254730galleryphoto1.png', '1651254730galleryphoto2.png', '1651254730galleryphoto3.png');
+
 -- --------------------------------------------------------
 
 --
@@ -218,6 +265,50 @@ CREATE TABLE `hobbiestable` (
   `InterestID` int(255) DEFAULT NULL,
   `Rank` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `hobbiestable`
+--
+
+INSERT INTO `hobbiestable` (`unique_id`, `InterestID`, `Rank`) VALUES
+(1553898402, 1, 1),
+(1553898402, 26, 1),
+(1553898402, 48, 1),
+(1596368926, 14, 1),
+(1596368926, 15, 1),
+(1596368926, 28, 1),
+(1596368926, 29, 1),
+(1596368926, 39, 1),
+(1596368926, 40, 1),
+(1596368926, 60, 1),
+(1596368926, 61, 1),
+(1596368926, 62, 1),
+(1596368926, 63, 1),
+(157434744, 1, 1),
+(157434744, 4, 1),
+(157434744, 27, 1),
+(157434744, 46, 1),
+(157434744, 54, 1),
+(380519091, 5, 1),
+(380519091, 7, 1),
+(380519091, 19, 1),
+(380519091, 24, 1),
+(380519091, 27, 1),
+(380519091, 33, 1),
+(380519091, 40, 1),
+(380519091, 43, 1),
+(380519091, 54, 1),
+(380519091, 55, 1),
+(380519091, 65, 1),
+(918324180, 1, 1),
+(918324180, 8, 1),
+(918324180, 18, 1),
+(918324180, 27, 1),
+(918324180, 32, 1),
+(918324180, 43, 1),
+(918324180, 47, 1),
+(918324180, 57, 1),
+(918324180, 68, 1);
 
 -- --------------------------------------------------------
 
@@ -237,6 +328,13 @@ CREATE TABLE `locationinformation` (
   `LNG_Coord` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `locationinformation`
+--
+
+INSERT INTO `locationinformation` (`unique_id`, `Address Line 1`, `Address Line 2`, `Address Line 3`, `City`, `County`, `Country`, `LAT_Coord`, `LNG_Coord`) VALUES
+(918324180, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -250,6 +348,16 @@ CREATE TABLE `matchingtable` (
   `ConnectionTimestamp` datetime DEFAULT NULL,
   `Status` enum('accepted','declined','pending','') DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `matchingtable`
+--
+
+INSERT INTO `matchingtable` (`MatchID`, `UserA_ID`, `UserB_ID`, `ConnectionTimestamp`, `Status`) VALUES
+(265785407, 1596368926, 157434744, NULL, 'accepted'),
+(758856944, 380519091, 1596368926, NULL, 'accepted'),
+(785033114, 157434744, 1596368926, NULL, 'accepted'),
+(1547064061, 1596368926, 380519091, NULL, 'accepted');
 
 -- --------------------------------------------------------
 
@@ -266,6 +374,14 @@ CREATE TABLE `messages` (
   `IsFrosty` bit(1) DEFAULT NULL,
   `IsFirstMessage` bit(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `messages`
+--
+
+INSERT INTO `messages` (`msg_id`, `incoming_msg_id`, `outgoing_msg_id`, `Timestamp`, `msg`, `IsFrosty`, `IsFirstMessage`) VALUES
+(1, 157434744, 1596368926, NULL, 'Hi', NULL, b'1'),
+(2, 1596368926, 157434744, NULL, 'Hi', NULL, b'1');
 
 -- --------------------------------------------------------
 
@@ -302,6 +418,17 @@ CREATE TABLE `profiletable` (
   `isfrosty` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `profiletable`
+--
+
+INSERT INTO `profiletable` (`unique_id`, `Age`, `Gender`, `Seeking`, `Description`, `BackgroundColour`, `Banned`, `Location`, `NewHatch`, `OnFire`, `TopUser`, `Ghost`, `isfrosty`) VALUES
+(157434744, 20, 'Female', 'Male', NULL, '#7E75B7', NULL, 'Limerick', '&#x1F423', '&#x1F525', '&#x1F947', '', ''),
+(380519091, NULL, 'Female', 'Male', 'My bio', '#7E75B7', NULL, NULL, '&#x1F423', '', '', '', ''),
+(871839920, NULL, NULL, NULL, NULL, '#7E75B7', NULL, NULL, '&#x1F423', '', '', '', ''),
+(918324180, 22, 'Male', 'Male', 'This is my bio', '#7E75B7', NULL, 'Limerick', '&#x1F423', '', '', '', ''),
+(1596368926, 20, 'Male', 'Female', 'My Bio', '#9696e4', NULL, 'Limerick', '&#x1F423', '', '&#x1F947', '', '');
+
 -- --------------------------------------------------------
 
 --
@@ -316,10 +443,19 @@ CREATE TABLE `users` (
   `email` varchar(255) DEFAULT NULL,
   `password` varchar(255) DEFAULT NULL,
   `Admin` tinyint(1) DEFAULT NULL,
-  `Completed` tinyint(1) DEFAULT NULL,
+  `Completed` tinyint(1) DEFAULT 1,
   `status` varchar(255) DEFAULT NULL,
   `img` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`user_id`, `unique_id`, `fname`, `lname`, `email`, `password`, `Admin`, `Completed`, `status`, `img`) VALUES
+(3, 1596368926, 'Jack', 'Boland', 'jack@gmail.com', '4c6c9e650ce66e5726d95b13a60654bd', 1, 1, 'Active now', '1651070169download.png'),
+(6, 380519091, 'Sarah', 'Smith', 'henry@gmail.com', '179909b745f81f03f177a3079e0ce5e3', NULL, 1, 'Offline now', '1651251753download.png'),
+(7, 918324180, 'henry', 'jones', 'henryjones@gmail.com', '027e4180beedb29744413a7ea6b84a42', NULL, 1, 'Offline now', '1651254681download.png');
 
 --
 -- Indexes for dumped tables
@@ -407,13 +543,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `messages`
 --
 ALTER TABLE `messages`
-  MODIFY `msg_id` int(255) NOT NULL AUTO_INCREMENT;
+  MODIFY `msg_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(255) NOT NULL AUTO_INCREMENT;
+  MODIFY `user_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
