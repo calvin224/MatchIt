@@ -22,6 +22,10 @@ $sql2 = mysqli_query($conn, "SELECT * FROM profiletable WHERE unique_id = {$user
 if(mysqli_num_rows($sql2) > 0){
     $row3 = mysqli_fetch_assoc($sql2);
 }
+$sql4 = mysqli_query($conn,"SELECT * FROM gallerypicturestable WHERE unique_id ={$user_id}" );
+if(mysqli_num_rows($sql4) > 0){
+    $row4 = mysqli_fetch_assoc($sql4);
+}
 $user_id = mysqli_real_escape_string($conn, $_GET['user_id']);
 $sql = mysqli_query($conn, "SELECT * FROM users WHERE unique_id = {$user_id}");
 if(mysqli_num_rows($sql) > 0){
@@ -68,57 +72,172 @@ if ($row3['Age'] == 0){
             <a href="Profile.php"> <img src="php/images/<?php echo $row2['img']; ?>" alt=""> </a>
         </div>
     </header>
-    <hr>
-    <div class="profile columns">
-        <div class="profile col1">
-            <div class="profile picture">
-                <img src="php/images/<?php echo $row['img']; ?>" alt="">
-            </div>
-            <div class="profile attributes">
-                <img src="css/images/freshhatch.png" title="New Hatch">
-                <img src="css/images/frosty.png" title="Frosty!">
-                <img src="css/images/inshell.png" title="In Your Shell">
-                <img src="css/images/onfire.png" title="On Fire!">
-                <button id="btn" value="1">Accept</button>
-                <button id="btn" value="2">Reject</button>
-            </div>
-            <div class="profile details">
-                <p><?php echo $row['fname']. " " . $row['lname'] ?></p>
-                <p><?php echo $age ?></p>
-                <p><?php echo $row3['Location'] ?></p>
-            </div>
-            <div class="profile about">
-                <p>Fusce mattis pulvinar tortor a vehicula. Mauris turpis tellus, porttitor sit amet egestas id, congue et dui. Phasellus feugiat, risus quis tincidunt auctor, augue est mattis erat, id volutpat lectus nunc in leo. Aliquam non efficitur mi. Etiam sagittis, turpis at mollis bibendum, eros tellus consectetur felis, eu convallis felis lacus sed nisi. Cras aliquet feugiat leo vel mollis. Quisque vitae libero vehicula, rhoncus erat vel, auctor purus. Nam venenatis laoreet pharetra. Quisque mauris mauris, condimentum ac nunc nec, ultrices semper massaFusce mattis pulvinar tortor a vehicula. Mauris turpis tellus, porttitor sit amet egestas id, congue et dui. Phasellus feugiat, risus quis tincidunt auctor, augue est mattis erat, id volutpat lectus nunc in leo. Aliquam non efficitur mi. Etiam sagittis, turpis at mollis bibendum, eros tellus consectetur felis, eu convallis felis lacus sed nisi. Cras aliquet feugiat leo vel mollis. Quisque vitae libero vehicula, rhoncus erat vel, auctor purus. Nam venenatis laoreet pharetra. Quisque mauris mauris, condimentum ac nunc nec, ultrices semper massa.</p>
-            </div>
-        </div>
-        <div class="profile col2">
-            <div class="bioheader">
-                <p>User Bio</p>
-            </div>
-            <div class="bio">
-                <p><?php echo $row3['Description'] ?></p>
-            </div>
-        </div>
-        <div class="profile col3">
-            <div class="gallery">
-                <img src="css/images/1646743105discordpic.png">
-                <img src="css/images/1646743105discordpic.png">
-                <img src="css/images/1646743105discordpic.png">
-
-            </div>
+    <body>
+    <div class="topcolumn">
+        <div class="profile-picture">
+            <img src="php/images/<?php echo $row['img']; ?>" alt="">
         </div>
     </div>
-    <hr>
-    <footer>
-        <div class="footer logo">
-            <a href="index.php"> <img src="css/images/logo.png" alt="Logo"> </a>
+    <div class="row">
+        <div class="column" style="background-color:ghostwhite;">
+            <div class="Characteristics">
+                <h2>Characteristics</h2>
+                <div class="characteristicscontainer">
+                </div>
+            </div>
+            <div class="HobbiesInterests">
+                <h2>Hobbies & Interests</h2>
+                <div class="interestscontainer">
+
+                </div>
+            </div>
         </div>
-    </footer>
-</div>
+        <div class="column" style="background-color:ghostwhite;">
+            <div class="topdetails">
+                <h3><?php echo $row['fname']. " " . $row['lname'] ?><p><?php echo $age ?><p><?php echo $row3['Location'] ?></p></h3>
+            </div>
+            <div class ="Traits">
+                <h1><a href="index.php#Traits"><?php echo $row3['NewHatch']?> <?php echo $row3['OnFire']?> <?php echo $row3['TopUser']?> <?php $row3['Ghost']?> <?php $row3['isfrosty']?></a></h1>
+            </div>
+            <button id="btn" value="1" style="
+            margin-top: 13px;
+            height: 45px;
+            padding: 10px;
+            border: none;
+            font-size: 17px;
+            font-weight: 400;
+            background: #7E75B7;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;">Accept</button>
+            <button id="btn" value="2" style="
+            margin-top: 13px;
+            height: 45px;
+            padding: 10px;
+            border: none;
+            font-size: 17px;
+            font-weight: 400;
+            background: #7E75B7;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;">Reject</button>
+            <div class="About">
+                <h2>Bio:</h2>
+                <p><?php echo $row3['Description'] ?></>
+            </div>
+        </div>
+        <div class="column" style="background-color: ghostwhite">
+            <h2>Gallery</h2>
+            <!-- Slideshow !-->
+            <div class="slideshow-container">
 
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 3</div>
+                    <img src="php/images/<?php echo $row4['GalleryPicture1']; ?>"style="width:90%">
+                </div>
 
-<script src="JavaScript/chat.js"></script>
-<script src="JavaScript/Matching.js"></script>
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 3</div>
+                    <img src="php/images/<?php echo $row4['GalleryPicture2']; ?>"style="width:90%">
+                </div>
 
-</body>
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 3</div>
+                    <img src="php/images/<?php echo $row4['GalleryPicture3']; ?>"style="width:90%">
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+
+            </div>
+            <br>
+
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+            <!-- Slideshow !-->
+            <script>
+                let slideIndex = 1;
+                showSlides(slideIndex);
+
+                function plusSlides(n) {
+                    showSlides(slideIndex += n);
+                }
+
+                function currentSlide(n) {
+                    showSlides(slideIndex = n);
+                }
+
+                function showSlides(n) {
+                    let i;
+                    let slides = document.getElementsByClassName("mySlides");
+                    let dots = document.getElementsByClassName("dot");
+                    if (n > slides.length) {slideIndex = 1}
+                    if (n < 1) {slideIndex = slides.length}
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndex-1].style.display = "block";
+                    dots[slideIndex-1].className += " active";
+                }
+            </script>
+        </div>
+        <!--
+        <div class="profile columns">
+            <div class="profile col1">
+                <div class="profile picture">
+                    <img  alt="">
+                </div>
+                <div class="profile attributes">
+                    <img src="css/images/freshhatch.png" title="New Hatch">
+                    <img src="css/images/frosty.png" title="Frosty!">
+                    <img src="css/images/inshell.png" title="In Your Shell">
+                    <img src="css/images/onfire.png" title="On Fire!">
+
+                </div>
+                <div class="profile details">
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                </div>
+                <div class="profile about">
+                    <p>Fusce mattis pulvinar tortor a vehicula. Mauris turpis tellus, porttitor sit amet egestas id, congue et dui. Phasellus feugiat, risus quis tincidunt auctor, augue est mattis erat, id volutpat lectus nunc in leo. Aliquam non efficitur mi. Etiam sagittis, turpis at mollis bibendum, eros tellus consectetur felis, eu convallis felis lacus sed nisi. Cras aliquet feugiat leo vel mollis. Quisque vitae libero vehicula, rhoncus erat vel, auctor purus. Nam venenatis laoreet pharetra. Quisque mauris mauris, condimentum ac nunc nec, ultrices semper massaFusce mattis pulvinar tortor a vehicula. Mauris turpis tellus, porttitor sit amet egestas id, congue et dui. Phasellus feugiat, risus quis tincidunt auctor, augue est mattis erat, id volutpat lectus nunc in leo. Aliquam non efficitur mi. Etiam sagittis, turpis at mollis bibendum, eros tellus consectetur felis, eu convallis felis lacus sed nisi. Cras aliquet feugiat leo vel mollis. Quisque vitae libero vehicula, rhoncus erat vel, auctor purus. Nam venenatis laoreet pharetra. Quisque mauris mauris, condimentum ac nunc nec, ultrices semper massa.</p>
+                </div>
+            </div>
+            <div class="profile col2">
+                <div class="bioheader">
+                    <p>User Bio</p>
+                </div>
+                <div class="bio">
+                    <p></p>
+                </div>
+            </div>
+            <div class="profile col3">
+                <div class="gallery">
+                    <img src="css/images/1646743105discordpic.png">
+                    <img src="css/images/1646743105discordpic.png">
+                    <img src="css/images/1646743105discordpic.png">
+
+                </div>
+            </div>
+        </div>
+        !-->
+        <hr>
+        <footer>
+            <div class="footer logo">
+                <a href="index.php"> <img src="css/images/logo.png" alt="Logo"> </a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="JavaScript/chat.js"></script>
+    <script src="JavaScript/Matching.js"></script>
+    <script src="JavaScript/OtherUserProfile.js"></script>
+
+    </body>
 </html>

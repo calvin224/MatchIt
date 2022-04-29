@@ -182,8 +182,10 @@ header .profilepicture{
 }
 header .profilepicture img{
     width: 80px;
+    height: 80px;
     border-radius: 50%;
     align-items: center;
+    object-fit: cover;
     border: 3px solid #C3C8D3;
 }
 header .profilepicture img:hover{

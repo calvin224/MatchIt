@@ -64,9 +64,9 @@ if(mysqli_num_rows($sql4) > 0){
             <a href="Notifications.php" title="Notifications"> <i class="fa-solid fa-bell"></i> </a>
         </div>
         <div class="header profilepicture">
-            <a href="EditProfile.php"> <img src="php/images/<?php echo
+            <a href="php/logout.php?logout_id=<?php echo $row['unique_id']; ?>" class="logout"><img src="php/images/<?php echo
                 $row['img'];
-            ?>" alt=""> </a>
+            ?>" alt=""></a>
         </div>
     </header>
     <body>
@@ -586,8 +586,8 @@ if(mysqli_num_rows($sql4) > 0){
     </footer>
 </div>
 
-<script src="javascript/UserProfile.js"></script>
-<script src="javascript/EditProfile.js"></script>
+<script src="JavaScript/UserProfile.js"></script>
+<script src="JavaScript/EditProfile.js"></script>
 <script>
     let slideIndex = 1;
     showSlides(slideIndex);

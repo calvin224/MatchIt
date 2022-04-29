@@ -10,7 +10,7 @@ if(!empty($fname) && !empty($lname) && !empty($email) && !empty($password)){
     if(filter_var($email, FILTER_VALIDATE_EMAIL)){
         $sql = mysqli_query($conn, "SELECT * FROM users WHERE email = '{$email}'");
         if(mysqli_num_rows($sql) > 0){
-            echo "$email - This email already exist!";
+            echo "$email - An account using this email already exists!";
         }else{
             if(isset($_FILES['image'])){
                 $img_name = $_FILES['image']['name'];
@@ -36,7 +36,15 @@ if(!empty($fname) && !empty($lname) && !empty($email) && !empty($password)){
                             $insert_query = mysqli_query($conn, "INSERT INTO users (unique_id, fname, lname, email, password, img, status)
                                 VALUES ({$ran_id}, '{$fname}','{$lname}', '{$email}', '{$encrypt_pass}', '{$new_img_name}', '{$status}')");
                             $insert_query2 = mysqli_query($conn, "INSERT INTO profiletable (unique_id,NewHatch)
-                                VALUES ('{$ran_id}','{$hatched}')");
+                            VALUES ('{$ran_id}','{$hatched}')");
+                            $insert_query2 = mysqli_query($conn, "INSERT INTO locationinformation (unique_id)
+                            VALUES ('{$ran_id}')");
+                            $insert_query2 = mysqli_query($conn, "INSERT INTO hobbiestable (unique_id)
+                            VALUES ('{$ran_id}')");
+                            $insert_query2 = mysqli_query($conn, "INSERT INTO gallerypicturestable (unique_id)
+                            VALUES ('{$ran_id}')");
+                            $insert_query2 = mysqli_query($conn, "INSERT INTO abouttable (unique_id)
+                                VALUES ('{$ran_id}')");
                             if($insert_query){
                                 $select_sql2 = mysqli_query($conn, "SELECT * FROM users WHERE email = '{$email}'");
                                 if(mysqli_num_rows($select_sql2) > 0){

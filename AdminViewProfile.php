@@ -22,6 +22,10 @@ $sql2 = mysqli_query($conn, "SELECT * FROM profiletable WHERE unique_id = {$user
 if(mysqli_num_rows($sql2) > 0){
     $row3 = mysqli_fetch_assoc($sql2);
 }
+$sql4 = mysqli_query($conn,"SELECT * FROM gallerypicturestable WHERE unique_id ={$user_id}" );
+if(mysqli_num_rows($sql4) > 0){
+    $row4 = mysqli_fetch_assoc($sql4);
+}
 $user_id = mysqli_real_escape_string($conn, $_GET['user_id']);
 $sql = mysqli_query($conn, "SELECT * FROM users WHERE unique_id = {$user_id}");
 if(mysqli_num_rows($sql) > 0){
@@ -81,7 +85,7 @@ if ($row3['Age'] == 0){
                 <div class="characteristicscontainer">
                 </div>
             </div>
-            <div class="Interests">
+            <div class="HobbiesInterests">
                 <h2>Hobbies & Interests</h2>
                 <div class="interestscontainer">
 
@@ -297,6 +301,7 @@ if ($row3['Age'] == 0){
 
 <script src="JavaScript/chat.js"></script>
 <script src="JavaScript/Banning.js"></script>
+<script src="JavaScript/OtherUserProfile.js"></script>
 
 </body>
 </html>
