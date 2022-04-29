@@ -97,7 +97,7 @@ header .profilepicture img:hover{
     float: left;
     text-align: center;
     width: 33.33%;
-    height: 500px; /* Should be removed. Only for demonstration */
+    height: 83vh;
 }
 
 
@@ -109,7 +109,7 @@ header .profilepicture img:hover{
 }
 
 .wrapper footer{
-    margin: 10px;
+    margin-top: 500px;
     width: 100vw;
 }
 footer .logo{
